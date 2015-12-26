@@ -14,6 +14,7 @@
 		DD32B4BC1C2E4D1C00D63A04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD32B4BA1C2E4D1C00D63A04 /* Main.storyboard */; };
 		DD32B4BE1C2E4D1C00D63A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD32B4BD1C2E4D1C00D63A04 /* Assets.xcassets */; };
 		DD32B4C11C2E4D1C00D63A04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD32B4BF1C2E4D1C00D63A04 /* LaunchScreen.storyboard */; };
+		DD6AC6C11C2E518A0014269E /* ZKConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD6AC6C01C2E518A0014269E /* ZKConfig.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,9 @@
 		DD32B4BD1C2E4D1C00D63A04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD32B4C01C2E4D1C00D63A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD32B4C21C2E4D1C00D63A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD6AC6BF1C2E51470014269E /* ZKMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKMacros.h; sourceTree = "<group>"; };
+		DD6AC6C01C2E518A0014269E /* ZKConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZKConfig.plist; sourceTree = "<group>"; };
+		DD6AC6C21C2E52D10014269E /* ZKPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKPrefix.pch; sourceTree = "<group>"; };
 		FFBFF42D3B7117DD70BD4E45 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,14 +86,18 @@
 		DD32B4B01C2E4D1C00D63A04 /* ZKStandard */ = {
 			isa = PBXGroup;
 			children = (
-				DD32B4B41C2E4D1C00D63A04 /* AppDelegate.h */,
-				DD32B4B51C2E4D1C00D63A04 /* AppDelegate.m */,
+				DD6AC6BA1C2E51240014269E /* BaseObject */,
+				DD6AC6BB1C2E51240014269E /* Category */,
+				DD6AC6BD1C2E51240014269E /* Network */,
+				DD6AC6BE1C2E51240014269E /* Utilities */,
+				DD6AC6BC1C2E51240014269E /* Config */,
+				DD32B4BF1C2E4D1C00D63A04 /* LaunchScreen.storyboard */,
+				DD32B4BA1C2E4D1C00D63A04 /* Main.storyboard */,
 				DD32B4B71C2E4D1C00D63A04 /* ViewController.h */,
 				DD32B4B81C2E4D1C00D63A04 /* ViewController.m */,
-				DD32B4BA1C2E4D1C00D63A04 /* Main.storyboard */,
+				DD32B4B41C2E4D1C00D63A04 /* AppDelegate.h */,
+				DD32B4B51C2E4D1C00D63A04 /* AppDelegate.m */,
 				DD32B4BD1C2E4D1C00D63A04 /* Assets.xcassets */,
-				DD32B4BF1C2E4D1C00D63A04 /* LaunchScreen.storyboard */,
-				DD32B4C21C2E4D1C00D63A04 /* Info.plist */,
 				DD32B4B11C2E4D1C00D63A04 /* Supporting Files */,
 			);
 			path = ZKStandard;
@@ -98,9 +106,48 @@
 		DD32B4B11C2E4D1C00D63A04 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DD32B4C21C2E4D1C00D63A04 /* Info.plist */,
 				DD32B4B21C2E4D1C00D63A04 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD6AC6BA1C2E51240014269E /* BaseObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseObject;
+			sourceTree = "<group>";
+		};
+		DD6AC6BB1C2E51240014269E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		DD6AC6BC1C2E51240014269E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				DD6AC6BF1C2E51470014269E /* ZKMacros.h */,
+				DD6AC6C01C2E518A0014269E /* ZKConfig.plist */,
+				DD6AC6C21C2E52D10014269E /* ZKPrefix.pch */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		DD6AC6BD1C2E51240014269E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DD6AC6BE1C2E51240014269E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +213,7 @@
 				DD32B4C11C2E4D1C00D63A04 /* LaunchScreen.storyboard in Resources */,
 				DD32B4BE1C2E4D1C00D63A04 /* Assets.xcassets in Resources */,
 				DD32B4BC1C2E4D1C00D63A04 /* Main.storyboard in Resources */,
+				DD6AC6C11C2E518A0014269E /* ZKConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

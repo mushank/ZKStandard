@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		42520DCB2510D14809BE8DE1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B16649E14AC5CD30F592746 /* libPods.a */; };
+		DD058B791C32E2ED0035EE6A /* ZKNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = DD058B781C32E2ED0035EE6A /* ZKNetwork.m */; };
+		DD058B7C1C32E4060035EE6A /* ZKResponseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD058B7B1C32E4060035EE6A /* ZKResponseEntity.m */; };
+		DD2CFBB01C33B48200DD3572 /* ZKNetworkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2CFBAF1C33B48200DD3572 /* ZKNetworkUtils.m */; };
 		DD32B4B31C2E4D1C00D63A04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD32B4B21C2E4D1C00D63A04 /* main.m */; };
 		DD32B4B61C2E4D1C00D63A04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD32B4B51C2E4D1C00D63A04 /* AppDelegate.m */; };
 		DD32B4B91C2E4D1C00D63A04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD32B4B81C2E4D1C00D63A04 /* ViewController.m */; };
@@ -25,6 +28,13 @@
 /* Begin PBXFileReference section */
 		3003A0DDCF2FCAC488A61F75 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4B16649E14AC5CD30F592746 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD058B731C32E2DA0035EE6A /* ZKAPIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKAPIConstants.h; sourceTree = "<group>"; };
+		DD058B771C32E2ED0035EE6A /* ZKNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKNetwork.h; sourceTree = "<group>"; };
+		DD058B781C32E2ED0035EE6A /* ZKNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKNetwork.m; sourceTree = "<group>"; };
+		DD058B7A1C32E4060035EE6A /* ZKResponseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKResponseEntity.h; sourceTree = "<group>"; };
+		DD058B7B1C32E4060035EE6A /* ZKResponseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKResponseEntity.m; sourceTree = "<group>"; };
+		DD2CFBAE1C33B48200DD3572 /* ZKNetworkUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKNetworkUtils.h; sourceTree = "<group>"; };
+		DD2CFBAF1C33B48200DD3572 /* ZKNetworkUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKNetworkUtils.m; sourceTree = "<group>"; };
 		DD32B4AE1C2E4D1C00D63A04 /* ZKStandard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZKStandard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD32B4B21C2E4D1C00D63A04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DD32B4B41C2E4D1C00D63A04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +90,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DD058B721C32E2DA0035EE6A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DD058B731C32E2DA0035EE6A /* ZKAPIConstants.h */,
+				DD058B7A1C32E4060035EE6A /* ZKResponseEntity.h */,
+				DD058B7B1C32E4060035EE6A /* ZKResponseEntity.m */,
+				DD058B771C32E2ED0035EE6A /* ZKNetwork.h */,
+				DD058B781C32E2ED0035EE6A /* ZKNetwork.m */,
+				DD2CFBAE1C33B48200DD3572 /* ZKNetworkUtils.h */,
+				DD2CFBAF1C33B48200DD3572 /* ZKNetworkUtils.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		DD32B4A51C2E4D1C00D63A04 = {
 			isa = PBXGroup;
 			children = (
@@ -101,8 +125,8 @@
 		DD32B4B01C2E4D1C00D63A04 /* ZKStandard */ = {
 			isa = PBXGroup;
 			children = (
+				DD058B721C32E2DA0035EE6A /* Network */,
 				DD6AC6BB1C2E51240014269E /* Category */,
-				DD6AC6BD1C2E51240014269E /* Network */,
 				DD6AC6BE1C2E51240014269E /* Utilities */,
 				DD6AC6BA1C2E51240014269E /* BaseObject */,
 				DD6AC6BC1C2E51240014269E /* Config */,
@@ -159,13 +183,6 @@
 				DD6AC6C21C2E52D10014269E /* ZKPrefix.pch */,
 			);
 			path = Config;
-			sourceTree = "<group>";
-		};
-		DD6AC6BD1C2E51240014269E /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		DD6AC6BE1C2E51240014269E /* Utilities */ = {
@@ -298,9 +315,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDD6C5441C2FB9C000741C38 /* ZKBaseViewController.m in Sources */,
+				DD058B791C32E2ED0035EE6A /* ZKNetwork.m in Sources */,
+				DD058B7C1C32E4060035EE6A /* ZKResponseEntity.m in Sources */,
 				DDD6C5381C2FB22100741C38 /* ZKBaseEntity.m in Sources */,
 				DDD6C53B1C2FB8BE00741C38 /* ZKBaseModel.m in Sources */,
 				DD32B4B91C2E4D1C00D63A04 /* ViewController.m in Sources */,
+				DD2CFBB01C33B48200DD3572 /* ZKNetworkUtils.m in Sources */,
 				DDD6C5411C2FB9B000741C38 /* ZKBaseTableViewController.m in Sources */,
 				DD32B4B61C2E4D1C00D63A04 /* AppDelegate.m in Sources */,
 				DD32B4B31C2E4D1C00D63A04 /* main.m in Sources */,

@@ -10,15 +10,12 @@
 #define ZKMacros_h
 
 
-#endif /* ZKMacros_h */
-
-
 // ==================== ZKLog ====================
 #ifndef __OPTIMIZE__
 #define ZKLog(fmt, ...) NSLog((@"%s [Line %d]" fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #else
 #define ZKLog(...) do{ }while(0)
-#endif
+#endif /* __OPTIMIZE__ */
 
 
 // ==================== Common Define ====================
@@ -33,3 +30,6 @@
 #define ZK_IOS7_OR_LATER            ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
 #define ZK_IOS8_OR_LATER            ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 #define ZK_IOS9_OR_LATER            ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
+
+
+#endif /* ZKMacros_h */

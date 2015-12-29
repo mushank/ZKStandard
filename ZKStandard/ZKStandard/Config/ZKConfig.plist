@@ -8,7 +8,7 @@
 	<string>https://</string>
 	<key>Base Server Address Development</key>
 	<string>172.167.140.1:80</string>
-	<key>Base Server Address QA</key>
+	<key>Base Server Address Test</key>
 	<string>172.167.140.1:80</string>
 	<key>Base Server Address Distribution</key>
 	<string>172.167.140.1:80</string>

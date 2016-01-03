@@ -8,6 +8,44 @@
 
 #import "ZKFileManager.h"
 
+static ZKFileManager *fileManager = nil;
+
 @implementation ZKFileManager
+
++ (ZKFileManager *)sharedInstance
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        fileManager = [[ZKFileManager alloc]init];
+    });
+    return fileManager;
+}
+
+- (NSMutableDictionary *)readFromBundleFile:(NSString *)fileName withType:(NSString *)fileType;
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:fileType];
+    NSMutableDictionary *returnData = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
+    
+    return returnData;
+}
+
+- (void)writeData:(NSMutableDictionary *)writtenData toBundleFile:(NSString *)fileName withType:(NSString *)fileType
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:fileType];
+    NSMutableDictionary *fileData = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
+    
+    [fileData setDictionary:writtenData];
+    
+    NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *documentsDirectory;
+    if (pathArray && pathArray.count > 0) {
+        documentsDirectory = [pathArray objectAtIndex:0];
+    }
+    
+    NSString *fullFileName = [NSString stringWithFormat:@"%@.%@", fileName, fileType];
+    NSString *file = [documentsDirectory stringByAppendingPathComponent:fullFileName];
+    [fileData writeToFile:file atomically:YES];
+}
+
 
 @end

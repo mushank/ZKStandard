@@ -10,4 +10,35 @@
 
 @interface ZKFileManager : NSObject
 
+/**
+ *  @method             sharedInstance
+ *  @abstract           share fileManager
+ *  @discussion
+ *  @param              NULL
+ *  @param result       return ZKFileManager Singleton
+ */
++ (ZKFileManager *)sharedInstance;
+
+/**
+ *  @method             readFromBundleFile
+ *  @abstract           read data from bundle file
+ *  @discussion
+ *  @param fileName     file name
+ *  @param fileType     file type
+ *  @param result       return NSMutableDictionary
+ */
+- (NSMutableDictionary *)readFromBundleFile:(NSString *)fileName withType:(NSString *)fileType;
+
+/**
+ *  @method             writeData
+ *  @abstract           write data to file in bundle
+ *  @discussion
+ *  @param writtenData  data to be written
+ *  @param fileName     file name
+ *  @param fileType     file type
+ *  @param result       void
+ */
+- (void)writeData:(NSMutableDictionary *)writtenData toBundleFile:(NSString *)fileName withType:(NSString *)fileType;
+
+
 @end

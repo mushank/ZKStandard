@@ -6,11 +6,11 @@
 	<integer>60</integer>
 	<key>Base Server Schema</key>
 	<string>https://</string>
-	<key>Base Server Address Development</key>
+	<key>Base Server Address Dev</key>
 	<string>172.167.140.1:80</string>
 	<key>Base Server Address Test</key>
 	<string>172.167.140.1:80</string>
-	<key>Base Server Address Distribution</key>
+	<key>Base Server Address Dis</key>
 	<string>172.167.140.1:80</string>
 </dict>
 </plist>

@@ -17,6 +17,6 @@
 
 #ifdef __OBJC__
 
-#import "ZKMacros"
+#import "ZKMacros.h"
 
 #endif

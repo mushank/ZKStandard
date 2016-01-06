@@ -39,7 +39,7 @@ static ZKNetworkManager *networkManager = nil;
     return self;
 }
 
-- (void)getWithSubPath:(NSString *)subPath
+- (void)getRequestWithSubPath:(NSString *)subPath
             parameters:(id)parameters
                succees:(ZKNetworkSuccessBlock)successBlock
                failure:(ZKNetworkFailureBlock)failureBlock

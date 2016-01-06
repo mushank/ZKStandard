@@ -25,7 +25,7 @@ typedef NS_ENUM (NSInteger, ZKResponseStatus)
  * 说明：APP中所有API地址请于下方定义
  * 注意：所有API请打上备注
  */
-static NSString *const GET_LOGIN = @"api/ChatWeb/Login"; /* 登录 */
+static NSString *const GET_LOGIN = @"api/WeChat/Login"; /* 登录 */
 
 
 

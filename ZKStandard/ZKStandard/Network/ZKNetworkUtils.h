@@ -55,13 +55,13 @@ typedef NS_ENUM(NSInteger, ZKServerAddressType)
 + (NSURL *)urlWithSubPath:(NSString *)subPath;
 
 /**
- *  @method             timeOutInterval
- *  @abstract           get timeOutInterval
+ *  @method             timeoutInterval
+ *  @abstract           get timeoutInterval
  *  @discussion
  *  @param              NULL
- *  @param result       return timeOutInterval doubleValue
+ *  @param result       return timeoutInterval doubleValue
  */
-+ (NSTimeInterval)timeOutInterval;
++ (NSTimeInterval)timeoutInterval;
 
 
 @end

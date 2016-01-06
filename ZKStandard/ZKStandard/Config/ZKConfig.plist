@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Time Out Interval</key>
-	<integer>60</integer>
 	<key>Base Server Schema</key>
 	<string>https://</string>
 	<key>Base Server Address Dev</key>
@@ -12,5 +10,7 @@
 	<string>172.167.140.1:80</string>
 	<key>Base Server Address Dis</key>
 	<string>172.167.140.1:80</string>
+	<key>Timeout Interval</key>
+	<integer>60</integer>
 </dict>
 </plist>

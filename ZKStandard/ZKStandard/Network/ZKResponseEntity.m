@@ -15,8 +15,8 @@
     self = [super init];
     if (self) {
         self.status     = [[responseDictionary objectForKey:ZKNETWORK_CODE] integerValue];
-        self.message    = [responseDictionary objectForKey:ZKNETWORK_MSG];
-        self.data       = [responseDictionary objectForKey:ZKNETWORK_DATA];
+        self.message    = [responseDictionary  objectForKey:ZKNETWORK_MSG];
+        self.data       = [responseDictionary  objectForKey:ZKNETWORK_DATA];
     }
     return self;
 }

@@ -7,7 +7,6 @@
 //
 
 #import "ZKNetworkUtils.h"
-#import "ZKFileManager.h"
 
 
 @implementation ZKNetworkUtils
@@ -15,36 +14,32 @@
 static NSString *const kConfig = @"ZKConfig";   /* 配置文件名 */
 static NSString *const kPlist = @"plist";       /* 配置文件类型 */
 
+static NSString *const kBaseServerSchema = @"Base Server Schema";    /* <ZKConfig.plish> 服务器Schema键值 */
 static NSString *const kBaseServerAddressDev    = @"Base Server Address Dev";   /* <ZKConfig.plish> 开发环境键值 */
 static NSString *const kBaseServerAddressTest   = @"Base Server Address Test";  /* <ZKConfig.plish> 测试环境键值 */
 static NSString *const kBaseServerAddressDis    = @"Base Server Address Dis";   /* <ZKConfig.plish> 生产环境键值 */
-
-static NSString *const kBaseServerSchema        = @"Base Server Schema";    /* <ZKConfig.plish> 服务器Schema键值 */
-static NSString *const kTimeoutInterval         = @"Timeout Interval";      /* <ZKConfig.plish> 网络访问时限键值 */
+static NSString *const kTimeoutInterval = @"Timeout Interval";      /* <ZKConfig.plish> 网络访问时限键值 */
 
 
 + (NSString *)baseServerSchema
 {
-    NSMutableDictionary *dic = [[ZKFileManager sharedInstance]readFromBundleFile:kConfig withType:kPlist];
-    NSString *baseServierSchema = [dic objectForKey:kBaseServerSchema];
+    NSString *baseServierSchema = [self readConfigObjectForKey:kBaseServerSchema];
     return baseServierSchema;
-
 }
 
-+ (NSString *)baseServerAddressWithType:(ZKServerAddressType)type
++ (NSString *)baseServerAddressForType:(ZKServerAddressType)type
 {
-    NSMutableDictionary *dic = [[ZKFileManager sharedInstance]readFromBundleFile:kConfig withType:kPlist];
     NSString *baseServerAddress;
 
     switch (type) {
         case ZKServerAddressTypeDev:
-            baseServerAddress = [dic objectForKey:kBaseServerAddressDev];
+            baseServerAddress = [self readConfigObjectForKey:kBaseServerAddressDev];
             break;
         case ZKServerAddressTypeTest:
-            baseServerAddress = [dic objectForKey:kBaseServerAddressTest];
+            baseServerAddress = [self readConfigObjectForKey:kBaseServerAddressTest];
             break;
         case ZKServerAddressTypeDis:
-            baseServerAddress = [dic objectForKey:kBaseServerAddressDis];
+            baseServerAddress = [self readConfigObjectForKey:kBaseServerAddressDis];
             break;
         default:
             break;
@@ -62,7 +57,7 @@ static NSString *const kTimeoutInterval         = @"Timeout Interval";      /* <
 #endif
     
     NSString *baseServerSchema = [self baseServerSchema];
-    NSString *baseServerAddress = [self baseServerAddressWithType:type];
+    NSString *baseServerAddress = [self baseServerAddressForType:type];
     NSString *baseServerPath = [NSString stringWithFormat:@"%@%@",baseServerSchema,baseServerAddress];
     
     return baseServerPath;
@@ -70,7 +65,7 @@ static NSString *const kTimeoutInterval         = @"Timeout Interval";      /* <
 
 + (NSURL *)urlWithSubPath:(NSString *)subPath
 {
-    NSString *urlString = [NSString stringWithFormat:@"%@%@",self.baseServerPath, subPath];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@",[self baseServerPath], subPath];
     NSURL *url = [NSURL URLWithString:urlString];
     
     return url;
@@ -79,10 +74,20 @@ static NSString *const kTimeoutInterval         = @"Timeout Interval";      /* <
 
 + (NSTimeInterval)timeoutInterval
 {
-    NSMutableDictionary *dic = [[ZKFileManager sharedInstance]readFromBundleFile:kConfig withType:kPlist];
-    NSTimeInterval timeoutInterval = [[dic objectForKey:kTimeoutInterval] doubleValue];
+    NSTimeInterval timeoutInterval = [[self readConfigObjectForKey:kTimeoutInterval] doubleValue];
     
     return timeoutInterval;
 }
+
+#pragma mark - Private Method
++ (id)readConfigObjectForKey:(NSString *)key
+{
+    NSString *configPath = [[NSBundle mainBundle]pathForResource:kConfig ofType:kPlist];
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithContentsOfFile:configPath];
+    id returnValue = [dic objectForKey:key];
+    
+    return returnValue;
+}
+
 
 @end

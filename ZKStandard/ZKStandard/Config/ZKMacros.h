@@ -31,5 +31,13 @@
 #define ZK_IOS8_OR_LATER            ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 #define ZK_IOS9_OR_LATER            ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
 
+// ==================== Network Define ====================
+#define ZK_NOTI_NETWORK_NOTREACHABLE        @"ZK_NOTI_NETWORK_NOTREACHABLE"
+#define ZK_NOTI_NETWORK_SESSIONEXPIRED      @"ZK_NOTI_NETWORK_SESSIONEXPIRED"
+#define ZK_NOTI_NETWORK_TOKENEXPIRED        @"ZK_NOTI_NETWORK_TOKENEXPIRED"
+#define ZK_NOTI_NETWORK_BUSINESSUNIVERSIAL  @"ZK_NOTI_NETWORK_BUSINESSUNIVERSIAL"
+#define ZK_NOTI_NETWORK_ERROR               @"ZK_NOTI_NETWORK_ERROR"
+
+#define TOKEN [[NSUserDefaults standardUserDefaults] objectForKey:@"token"]
 
 #endif /* ZKMacros_h */

@@ -11,6 +11,6 @@
 	<key>Base Server Address Dis</key>
 	<string>172.167.140.1:80</string>
 	<key>Timeout Interval</key>
-	<integer>60</integer>
+	<integer>30</integer>
 </dict>
 </plist>

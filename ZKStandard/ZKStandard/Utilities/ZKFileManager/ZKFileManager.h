@@ -11,13 +11,13 @@
 @interface ZKFileManager : NSObject
 
 /**
- *  @method             sharedInstance
+ *  @method             sharedManager
  *  @abstract           share fileManager
  *  @discussion
  *  @param              NULL
  *  @param result       return ZKFileManager Singleton
  */
-+ (ZKFileManager *)sharedInstance;
++ (ZKFileManager *)sharedManager;
 
 /**
  *  @method             readFromBundleFile

@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger, ZKServerAddressType)
  *  @param type         server address type
  *  @param result       return baseServerAddress String
  */
-+ (NSString *)baseServerAddressWithType:(ZKServerAddressType)type;
++ (NSString *)baseServerAddressForType:(ZKServerAddressType)type;
 
 /**
  *  @method             baseServerPath
@@ -62,6 +62,5 @@ typedef NS_ENUM(NSInteger, ZKServerAddressType)
  *  @param result       return timeoutInterval doubleValue
  */
 + (NSTimeInterval)timeoutInterval;
-
 
 @end

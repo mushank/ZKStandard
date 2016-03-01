@@ -12,7 +12,7 @@ static ZKFileManager *fileManager = nil;
 
 @implementation ZKFileManager
 
-+ (ZKFileManager *)sharedInstance
++ (ZKFileManager *)sharedManager
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

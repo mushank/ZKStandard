@@ -10,6 +10,7 @@
 		42520DCB2510D14809BE8DE1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B16649E14AC5CD30F592746 /* libPods.a */; };
 		DD058B791C32E2ED0035EE6A /* ZKNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD058B781C32E2ED0035EE6A /* ZKNetworkManager.m */; };
 		DD058B7C1C32E4060035EE6A /* ZKResponseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD058B7B1C32E4060035EE6A /* ZKResponseEntity.m */; };
+		DD178E4D1C87414B008511FA /* MBProgressHUD+ZKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DD178E4C1C87414B008511FA /* MBProgressHUD+ZKExtension.m */; };
 		DD17E71B1C858A8B006FF6EF /* ZKFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD17E71A1C858A8B006FF6EF /* ZKFileManager.m */; };
 		DD17E7221C858AD3006FF6EF /* ZKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DD17E7211C858AD3006FF6EF /* ZKUtils.m */; };
 		DD2CFBB01C33B48200DD3572 /* ZKNetworkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2CFBAF1C33B48200DD3572 /* ZKNetworkUtils.m */; };
@@ -25,6 +26,7 @@
 		DDD6C53E1C2FB99A00741C38 /* ZKBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD6C53D1C2FB99A00741C38 /* ZKBaseNavigationController.m */; };
 		DDD6C5411C2FB9B000741C38 /* ZKBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD6C5401C2FB9B000741C38 /* ZKBaseTableViewController.m */; };
 		DDD6C5441C2FB9C000741C38 /* ZKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD6C5431C2FB9C000741C38 /* ZKBaseViewController.m */; };
+		DDEC89891C889A2D005B9F97 /* MBProgressHUD+ZKExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DDEC89881C889A2D005B9F97 /* MBProgressHUD+ZKExtension.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		DD058B781C32E2ED0035EE6A /* ZKNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKNetworkManager.m; sourceTree = "<group>"; };
 		DD058B7A1C32E4060035EE6A /* ZKResponseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKResponseEntity.h; sourceTree = "<group>"; };
 		DD058B7B1C32E4060035EE6A /* ZKResponseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKResponseEntity.m; sourceTree = "<group>"; };
+		DD178E4B1C87414B008511FA /* MBProgressHUD+ZKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ZKExtension.h"; sourceTree = "<group>"; };
+		DD178E4C1C87414B008511FA /* MBProgressHUD+ZKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+ZKExtension.m"; sourceTree = "<group>"; };
 		DD17E7191C858A8B006FF6EF /* ZKFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKFileManager.h; sourceTree = "<group>"; };
 		DD17E71A1C858A8B006FF6EF /* ZKFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKFileManager.m; sourceTree = "<group>"; };
 		DD17E7201C858AD3006FF6EF /* ZKUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKUtils.h; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 		DDD6C5401C2FB9B000741C38 /* ZKBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKBaseTableViewController.m; sourceTree = "<group>"; };
 		DDD6C5421C2FB9C000741C38 /* ZKBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKBaseViewController.h; sourceTree = "<group>"; };
 		DDD6C5431C2FB9C000741C38 /* ZKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKBaseViewController.m; sourceTree = "<group>"; };
+		DDEC89881C889A2D005B9F97 /* MBProgressHUD+ZKExtension.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "MBProgressHUD+ZKExtension.bundle"; sourceTree = "<group>"; };
 		FFBFF42D3B7117DD70BD4E45 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +113,16 @@
 				DD2CFBAF1C33B48200DD3572 /* ZKNetworkUtils.m */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		DD178E471C874100008511FA /* MBProgressHUD+ZKExtension */ = {
+			isa = PBXGroup;
+			children = (
+				DD178E4B1C87414B008511FA /* MBProgressHUD+ZKExtension.h */,
+				DD178E4C1C87414B008511FA /* MBProgressHUD+ZKExtension.m */,
+				DDEC89881C889A2D005B9F97 /* MBProgressHUD+ZKExtension.bundle */,
+			);
+			path = "MBProgressHUD+ZKExtension";
 			sourceTree = "<group>";
 		};
 		DD17E7181C858A8B006FF6EF /* ZKFileManager */ = {
@@ -178,16 +193,16 @@
 		DD6AC6BA1C2E51240014269E /* BaseObject */ = {
 			isa = PBXGroup;
 			children = (
+				DDD6C5391C2FB8BE00741C38 /* ZKBaseModel.h */,
+				DDD6C53A1C2FB8BE00741C38 /* ZKBaseModel.m */,
+				DDD6C5361C2FB22100741C38 /* ZKBaseEntity.h */,
+				DDD6C5371C2FB22100741C38 /* ZKBaseEntity.m */,
 				DDD6C5421C2FB9C000741C38 /* ZKBaseViewController.h */,
 				DDD6C5431C2FB9C000741C38 /* ZKBaseViewController.m */,
 				DDD6C53F1C2FB9B000741C38 /* ZKBaseTableViewController.h */,
 				DDD6C5401C2FB9B000741C38 /* ZKBaseTableViewController.m */,
 				DDD6C53C1C2FB99A00741C38 /* ZKBaseNavigationController.h */,
 				DDD6C53D1C2FB99A00741C38 /* ZKBaseNavigationController.m */,
-				DDD6C5361C2FB22100741C38 /* ZKBaseEntity.h */,
-				DDD6C5371C2FB22100741C38 /* ZKBaseEntity.m */,
-				DDD6C5391C2FB8BE00741C38 /* ZKBaseModel.h */,
-				DDD6C53A1C2FB8BE00741C38 /* ZKBaseModel.m */,
 			);
 			path = BaseObject;
 			sourceTree = "<group>";
@@ -195,6 +210,7 @@
 		DD6AC6BB1C2E51240014269E /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				DD178E471C874100008511FA /* MBProgressHUD+ZKExtension */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -280,6 +296,7 @@
 			files = (
 				DD32B4C11C2E4D1C00D63A04 /* LaunchScreen.storyboard in Resources */,
 				DD32B4BE1C2E4D1C00D63A04 /* Assets.xcassets in Resources */,
+				DDEC89891C889A2D005B9F97 /* MBProgressHUD+ZKExtension.bundle in Resources */,
 				DD32B4BC1C2E4D1C00D63A04 /* Main.storyboard in Resources */,
 				DD6AC6C11C2E518A0014269E /* ZKConfig.plist in Resources */,
 			);
@@ -342,6 +359,7 @@
 			files = (
 				DDD6C5441C2FB9C000741C38 /* ZKBaseViewController.m in Sources */,
 				DD17E7221C858AD3006FF6EF /* ZKUtils.m in Sources */,
+				DD178E4D1C87414B008511FA /* MBProgressHUD+ZKExtension.m in Sources */,
 				DD058B791C32E2ED0035EE6A /* ZKNetworkManager.m in Sources */,
 				DD058B7C1C32E4060035EE6A /* ZKResponseEntity.m in Sources */,
 				DDD6C5381C2FB22100741C38 /* ZKBaseEntity.m in Sources */,
@@ -467,6 +485,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZKStandard/Config/ZKPrefix.pch";
 				INFOPLIST_FILE = ZKStandard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mushank.ZKStandard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -480,6 +499,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZKStandard/Config/ZKPrefix.pch";
 				INFOPLIST_FILE = ZKStandard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mushank.ZKStandard;
 				PRODUCT_NAME = "$(TARGET_NAME)";

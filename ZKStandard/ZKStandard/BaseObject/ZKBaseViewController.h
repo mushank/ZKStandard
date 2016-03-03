@@ -10,4 +10,9 @@
 
 @interface ZKBaseViewController : UIViewController
 
+/**
+ *  Add back button on the left side of navgation bar
+ */
+- (void)addBackButton;
+
 @end

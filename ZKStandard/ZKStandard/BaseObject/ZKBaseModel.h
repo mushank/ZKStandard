@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZKAPIConstants.h"
+#import "ZKNetworkManager.h"
 
 @interface ZKBaseModel : NSObject
+
+@property (strong, nonatomic) ZKNetworkManager *networkManager;
 
 @end

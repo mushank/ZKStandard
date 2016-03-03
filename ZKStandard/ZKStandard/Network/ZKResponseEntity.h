@@ -11,14 +11,14 @@
 
 @interface ZKResponseEntity : NSObject
 
-#pragma mark - Request success response property and method
+#pragma mark - Request Success Response Property and Method
 @property (nonatomic) ZKResponseStatus status;
 @property (strong, nonatomic) NSString *message;
 @property (strong, nonatomic) id data;
 
 - (instancetype)initWithResponseDictionary:(NSDictionary *)responseDictionary;
 
-#pragma mark - Request failure response property
+#pragma mark - Request Failure response property
 @property (strong, nonatomic) NSURLSessionDataTask *task;
 @property (strong, nonatomic) NSError *error;
 

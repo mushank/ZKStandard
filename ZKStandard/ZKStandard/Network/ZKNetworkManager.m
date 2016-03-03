@@ -12,7 +12,7 @@
 #import "Reachability.h"
 
 static NSString *kNetworkNotReachableMessage = @"无网络连接";
-static NSString *kNetworkrequestFailureMessage = @"网络不给力";
+static NSString *kNetworkRequestFailureMessage = @"网络不给力";
 
 static ZKNetworkManager *networkManager = nil;
 
@@ -43,7 +43,7 @@ static ZKNetworkManager *networkManager = nil;
 }
 
 #pragma mark - Invisible Get & Invisible Post
-- (void)getInvisibleRequestWithSubPath:(NSString *)subPath
+- (void)getRequestInvisiblyWithSubPath:(NSString *)subPath
                             parameters:(id)parameters
                        businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
 {
@@ -55,7 +55,7 @@ static ZKNetworkManager *networkManager = nil;
                  eternalExecute:^(){}];
 }
 
-- (void)postInvisibleRequestWithSubPath:(NSString *)subPath
+- (void)postRequestInvisiblyWithSubPath:(NSString *)subPath
                              parameters:(id)parameters
                         businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
 {
@@ -68,9 +68,9 @@ static ZKNetworkManager *networkManager = nil;
 }
 
 #pragma mark - Terse Get & Terse Post
-- (void)getTerseRequestWithSubPath:(NSString *)subPath
-                            parameters:(id)parameters
-                       businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
+- (void)getRequestTerselyWithSubPath:(NSString *)subPath
+                          parameters:(id)parameters
+                     businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
 {
     [self getRequestWithSubPath:subPath
                      parameters:parameters
@@ -80,9 +80,9 @@ static ZKNetworkManager *networkManager = nil;
                  eternalExecute:nil];
 }
 
-- (void)postTerseRequestWithSubPath:(NSString *)subPath
-                        parameters:(id)parameters
-                   businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
+- (void)postRequestTerselyWithSubPath:(NSString *)subPath
+                           parameters:(id)parameters
+                      businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
 {
     [self postRequestWithSubPath:subPath
                       parameters:parameters
@@ -101,7 +101,7 @@ static ZKNetworkManager *networkManager = nil;
                eternalExecute:(ZKEternalExecuteBlock)eternalExecuteBlock
 {
     if (![self isReachable]) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:ZK_NOTI_NETWORK_NOTREACHABLE object:kNetworkNotReachableMessage];
+        [[NSNotificationCenter defaultCenter] postNotificationName:ZK_NOTI_NETWORK_REQUEST_FAILURE object:kNetworkNotReachableMessage];
     }
     [self.requestSerializer setValue:TOKEN forHTTPHeaderField:@"Token"];
     
@@ -113,7 +113,7 @@ static ZKNetworkManager *networkManager = nil;
           if ([responseObject isKindOfClass:[NSDictionary class]]) {
               responseEntity = [[ZKResponseEntity alloc]initWithResponseDictionary:responseObject];
           }
-         
+          
           [self handleRequestSuccessWithTask:task
                                responseEtity:responseEntity
                              businessSuccess:businessSuccessBlock
@@ -133,10 +133,10 @@ static ZKNetworkManager *networkManager = nil;
                businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
                businessFailure:(ZKBusinessFailureBlock)businessFailureBlock
                 requestFailure:(ZKRequestFailureBlock)requestFailureBlock
-                 eternalExecute:(ZKEternalExecuteBlock)eternalExecuteBlock
+                eternalExecute:(ZKEternalExecuteBlock)eternalExecuteBlock
 {
     if (![self isReachable]) {
-        [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_NOTREACHABLE object:kNetworkNotReachableMessage];
+        [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_REQUEST_FAILURE object:kNetworkNotReachableMessage];
     }
     [self.requestSerializer setValue:TOKEN forHTTPHeaderField:@"Token"];
     
@@ -174,13 +174,15 @@ static ZKNetworkManager *networkManager = nil;
             NSAssert(businessSuccessBlock, ([NSString stringWithFormat:@"%@,%@", [[task currentRequest].URL relativeString], @"businessSuccessBlock can not be nil!"]));
             businessSuccessBlock(responseEntity);
             break;
-//        case ZKResponseStatusFailure:
-//            if (businessFailureBlock) {
-//                businessFailureBlock(responseEntity);
-//            } else {
-//                [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_BUSINESSUNIVERSIAL object:responseEntity.message];
-//            }
-//            break;
+            /*
+        case ZKResponseStatusFailure:
+            if (businessFailureBlock) {
+                businessFailureBlock(responseEntity);
+            } else {
+                [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_BUSINESSUNIVERSIAL object:responseEntity.message];
+            }
+            break;
+             */
         case ZKResponseStatusSessionExpired:
             [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_SESSIONEXPIRED object:responseEntity.message];
             break;
@@ -191,7 +193,7 @@ static ZKNetworkManager *networkManager = nil;
             if (businessFailureBlock) {
                 businessFailureBlock(responseEntity);
             } else {
-                [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_BUSINESSUNIVERSIAL object:responseEntity.message];
+                [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_BUSINESS_FAILURE object:responseEntity.message];
             }
             break;
     }
@@ -212,7 +214,7 @@ static ZKNetworkManager *networkManager = nil;
         requestFailureEntity.error = error;
         requestFailureBlock(requestFailureEntity);
     } else {
-        [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_ERROR object:kNetworkrequestFailureMessage];
+        [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_REQUEST_FAILURE object:kNetworkRequestFailureMessage];
     }
     
     if (eternalExecuteBlock) {

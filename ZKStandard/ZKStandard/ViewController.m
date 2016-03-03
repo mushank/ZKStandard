@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MBProgressHUD+ZKExtension.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 50)];
+    button.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:button];
+    [button addTarget:self action:@selector(buttonTapped) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)buttonTapped
+{
+    [MBProgressHUD showWarningTips:@"Tips"];
 }
 
 - (void)didReceiveMemoryWarning {

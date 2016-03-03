@@ -20,29 +20,29 @@ typedef void (^ZKEternalExecuteBlock) ();   /* 无论业务成功与否，都会
 /**
  *  @method             sharedManager
  *  @abstract           get networkManager Singleton
- *  @discussion
+ *  @discussion         Do not use shareInstance
  *  @param              NULL
  *  @param result       return networkManager Singleton
  */
 + (instancetype)sharedManager;
 
 #pragma mark - Invisible Get & Invisible Post
-- (void)getInvisibleRequestWithSubPath:(NSString *)subPath
+- (void)getRequestInvisiblyWithSubPath:(NSString *)subPath
                             parameters:(id)parameters
                        businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock;
 
-- (void)postInvisibleRequestWithSubPath:(NSString *)subPath
+- (void)postRequestInvisiblyWithSubPath:(NSString *)subPath
                              parameters:(id)parameters
                         businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock;
 
 #pragma mark - Terse Get & Terse Post
-- (void)getTerseRequestWithSubPath:(NSString *)subPath
-                        parameters:(id)parameters
-                   businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock;
+- (void)getRequestTerselyWithSubPath:(NSString *)subPath
+                          parameters:(id)parameters
+                     businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock;
 
-- (void)postTerseRequestWithSubPath:(NSString *)subPath
-                         parameters:(id)parameters
-                    businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock;
+- (void)postRequestTerselyWithSubPath:(NSString *)subPath
+                           parameters:(id)parameters
+                      businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock;
 
 #pragma mark - Normal Get & Normal Post
 - (void)getRequestWithSubPath:(NSString *)subPath

@@ -17,11 +17,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self addNetworkFailureNotificationObserver];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+
+#pragma mark - Public Method
+- (void)addBackButton
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setFrame:CGRectMake(0, 0, 20.0, 44.0)];
+    [button setImage:[UIImage imageNamed:@"BackButtonImage"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(backButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:button];
+    self.navigationItem.leftBarButtonItem = item;
+}
+
+#pragma mark - Target Method
+- (void)backButtonTapped
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)didReceiveNotification:(NSNotification *)notification
+{
+    if ([notification.name isEqualToString:ZK_NOTI_NETWORK_REQUEST_FAILURE] ||
+        [notification.name isEqualToString:ZK_NOTI_NETWORK_BUSINESS_FAILURE]) {
+        [MBProgressHUD showErrorTips:notification.object];
+    }
+}
+
+
+#pragma mark - Private Method
+- (void)addNetworkFailureNotificationObserver
+{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didReceiveNotification:) name:ZK_NOTI_NETWORK_REQUEST_FAILURE object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didReceiveNotification:) name:ZK_NOTI_NETWORK_BUSINESS_FAILURE object:nil];
 }
 
 /*

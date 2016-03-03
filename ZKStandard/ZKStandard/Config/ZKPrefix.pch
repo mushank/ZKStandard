@@ -18,5 +18,6 @@
 #ifdef __OBJC__
 
 #import "ZKMacros.h"
+#import "MBProgressHUD+ZKExtension.h"
 
 #endif

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZKBaseTableViewController : UITableViewController
+@interface ZKBaseTableViewController : UITableViewController<UITableViewDelegate>
 
 @end

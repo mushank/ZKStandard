@@ -56,6 +56,21 @@
     }
 }
 
+#pragma mark - ZKModelCallbackDelegate
+- (void)callbackBizSuccessWithRequestName:(NSString *)name object:(id)object
+{
+    
+}
+
+- (void)callbackBizFailureWithRequestName:(NSString *)name object:(id)object
+{
+    
+}
+
+- (void)callbackReqFailureWithRequestName:(NSString *)name object:(id)object
+{
+    
+}
 
 #pragma mark - Private Method
 - (void)addNetworkFailureNotificationObserver

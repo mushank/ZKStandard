@@ -9,7 +9,53 @@
 #import "ZKBaseModel.h"
 #import "ZKResponseEntity.h"
 
+@interface ZKBaseModel ()
+
+@property (nonatomic, weak) id<ZKModelCallbackDelegate> delegate;
+
+@end
+
 @implementation ZKBaseModel
+
+#pragma mark - Initialization
+- (instancetype)initWithCallbackDelegate:(id<ZKModelCallbackDelegate>)delegate
+{
+    self = [super init];
+    if (self) {
+        _delegate = delegate;
+    }
+    return self;
+}
+
+- (instancetype)init
+{
+    return [self initWithCallbackDelegate:nil];
+}
+
+#pragma mark - Callback Method
+- (void)pushCallbackStatus:(CallBackStatus)status requestName:(NSString *)name object:(id)object
+{
+    switch (status) {
+        case CallbackBizSuccessStatus:
+            if ([self.delegate respondsToSelector:@selector(callbackBizSuccessWithRequestName:object:)]) {
+                [self.delegate callbackBizSuccessWithRequestName:name object:object];
+            }
+            break;
+        case CallbackBizFailureStatus:
+            if ([self.delegate respondsToSelector:@selector(callbackBizFailureWithRequestName:object:)]) {
+                [self.delegate callbackBizFailureWithRequestName:name object:object];
+            }
+            break;
+        case CallbackreqFailureStatus:
+            if ([self.delegate respondsToSelector:@selector(callbackReqFailureWithRequestName:object:)]) {
+                [self.delegate callbackReqFailureWithRequestName:name object:object];
+            }
+            break;
+        default:
+            break;
+    }
+}
+
 
 #pragma mark - Network
 - (void)getToken

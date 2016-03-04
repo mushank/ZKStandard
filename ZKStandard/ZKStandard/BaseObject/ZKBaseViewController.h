@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZKBaseModel.h"
 
-@interface ZKBaseViewController : UIViewController
+@interface ZKBaseViewController : UIViewController<ZKModelCallbackDelegate>
 
 /**
  *  Add back button on the left side of navgation bar

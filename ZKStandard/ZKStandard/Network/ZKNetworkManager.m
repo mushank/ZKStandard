@@ -45,36 +45,36 @@ static ZKNetworkManager *networkManager = nil;
 #pragma mark - Invisible Get & Invisible Post
 - (void)getRequestInvisiblyWithSubPath:(NSString *)subPath
                             parameters:(id)parameters
-                       businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
+                       businessSuccess:(ZKBusinessSuccessBlock)bizSuccessBlock
 {
     [self getRequestWithSubPath:subPath
                      parameters:parameters
-                businessSuccess:businessSuccessBlock
-                businessFailure:^(ZKResponseEntity *businessFailureEntity){}
-                 requestFailure:^(ZKResponseEntity *requestFailureEntity){}
+                businessSuccess:bizSuccessBlock
+                businessFailure:^(ZKResponseEntity *bizFailureEntity){}
+                 requestFailure:^(ZKResponseEntity *reqFailureEntity){}
                  eternalExecute:^(){}];
 }
 
 - (void)postRequestInvisiblyWithSubPath:(NSString *)subPath
                              parameters:(id)parameters
-                        businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
+                        businessSuccess:(ZKBusinessSuccessBlock)bizSuccessBlock
 {
     [self postRequestWithSubPath:subPath
                       parameters:parameters
-                 businessSuccess:businessSuccessBlock
-                 businessFailure:^(ZKResponseEntity *businessFailureEntity){}
-                  requestFailure:^(ZKResponseEntity *requestFailureEntity){}
+                 businessSuccess:bizSuccessBlock
+                 businessFailure:^(ZKResponseEntity *bizFailureEntity){}
+                  requestFailure:^(ZKResponseEntity *httpFailureEntity){}
                   eternalExecute:^(){}];
 }
 
 #pragma mark - Terse Get & Terse Post
 - (void)getRequestTerselyWithSubPath:(NSString *)subPath
                           parameters:(id)parameters
-                     businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
+                     businessSuccess:(ZKBusinessSuccessBlock)bizSuccessBlock
 {
     [self getRequestWithSubPath:subPath
                      parameters:parameters
-                businessSuccess:businessSuccessBlock
+                businessSuccess:bizSuccessBlock
                 businessFailure:nil
                  requestFailure:nil
                  eternalExecute:nil];
@@ -82,11 +82,11 @@ static ZKNetworkManager *networkManager = nil;
 
 - (void)postRequestTerselyWithSubPath:(NSString *)subPath
                            parameters:(id)parameters
-                      businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
+                      businessSuccess:(ZKBusinessSuccessBlock)bizSuccessBlock
 {
     [self postRequestWithSubPath:subPath
                       parameters:parameters
-                 businessSuccess:businessSuccessBlock
+                 businessSuccess:bizSuccessBlock
                  businessFailure:nil
                   requestFailure:nil
                   eternalExecute:nil];
@@ -95,9 +95,9 @@ static ZKNetworkManager *networkManager = nil;
 #pragma mark - Normal Get & Normal Post
 - (void)getRequestWithSubPath:(NSString *)subPath
                    parameters:(id)parameters
-              businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
-              businessFailure:(ZKBusinessFailureBlock)businessFailureBlock
-               requestFailure:(ZKRequestFailureBlock)requestFailureBlock
+              businessSuccess:(ZKBusinessSuccessBlock)bizSuccessBlock
+              businessFailure:(ZKBusinessFailureBlock)bizFailureBlock
+               requestFailure:(ZKRequestFailureBlock)reqFailureBlock
                eternalExecute:(ZKEternalExecuteBlock)eternalExecuteBlock
 {
     if (![self isReachable]) {
@@ -116,23 +116,23 @@ static ZKNetworkManager *networkManager = nil;
           
           [self handleRequestSuccessWithTask:task
                                responseEtity:responseEntity
-                             businessSuccess:businessSuccessBlock
-                             businessFailure:businessFailureBlock
+                             businessSuccess:bizSuccessBlock
+                             businessFailure:bizFailureBlock
                               eternalExecute:eternalExecuteBlock];
       }
       failure:^(NSURLSessionDataTask *task, NSError *error){
           [self handleRequestFailureWithTask:task
                                        error:error
-                              requestFailure:requestFailureBlock
+                              requestFailure:reqFailureBlock
                               eternalExecute:eternalExecuteBlock];
       }];
 }
 
 - (void)postRequestWithSubPath:(NSString *)subPath
                     parameters:(id)parameters
-               businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
-               businessFailure:(ZKBusinessFailureBlock)businessFailureBlock
-                requestFailure:(ZKRequestFailureBlock)requestFailureBlock
+               businessSuccess:(ZKBusinessSuccessBlock)bizSuccessBlock
+               businessFailure:(ZKBusinessFailureBlock)bizFailureBlock
+                requestFailure:(ZKRequestFailureBlock)reqFailureBlock
                 eternalExecute:(ZKEternalExecuteBlock)eternalExecuteBlock
 {
     if (![self isReachable]) {
@@ -150,14 +150,14 @@ static ZKNetworkManager *networkManager = nil;
            }
            [self handleRequestSuccessWithTask:task
                                 responseEtity:responseEntity
-                              businessSuccess:businessSuccessBlock
-                              businessFailure:businessFailureBlock
+                              businessSuccess:bizSuccessBlock
+                              businessFailure:bizFailureBlock
                                eternalExecute:eternalExecuteBlock];
            
     } failure:^(NSURLSessionDataTask *task, NSError *error){
         [self handleRequestFailureWithTask:task
                                      error:error
-                            requestFailure:requestFailureBlock
+                            requestFailure:reqFailureBlock
                             eternalExecute:eternalExecuteBlock];
     }];
 }
@@ -165,14 +165,14 @@ static ZKNetworkManager *networkManager = nil;
 #pragma mark - Private Method
 - (void)handleRequestSuccessWithTask:(NSURLSessionDataTask *)task
                        responseEtity:(ZKResponseEntity *)responseEntity
-                     businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
-                     businessFailure:(ZKBusinessFailureBlock)businessFailureBlock
+                     businessSuccess:(ZKBusinessSuccessBlock)bizSuccessBlock
+                     businessFailure:(ZKBusinessFailureBlock)bizFailureBlock
                       eternalExecute:(ZKEternalExecuteBlock)eternalExecuteBlock
 {
     switch (responseEntity.status) {
         case ZKResponseStatusSuccess:
-            NSAssert(businessSuccessBlock, ([NSString stringWithFormat:@"%@,%@", [[task currentRequest].URL relativeString], @"businessSuccessBlock can not be nil!"]));
-            businessSuccessBlock(responseEntity);
+            NSAssert(bizSuccessBlock, ([NSString stringWithFormat:@"%@,%@", [[task currentRequest].URL relativeString], @"businessSuccessBlock can not be nil!"]));
+            bizSuccessBlock(responseEntity);
             break;
             /*
         case ZKResponseStatusFailure:
@@ -184,14 +184,14 @@ static ZKNetworkManager *networkManager = nil;
             break;
              */
         case ZKResponseStatusSessionExpired:
-            [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_SESSIONEXPIRED object:responseEntity.message];
+            [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_SESSION_EXPIRED object:responseEntity.message];
             break;
         case ZKResponseStatusTokenExpired:
-            [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_TOKENEXPIRED object:responseEntity.message];
+            [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_TOKEN_EXPIRED object:responseEntity.message];
             break;
         default:
-            if (businessFailureBlock) {
-                businessFailureBlock(responseEntity);
+            if (bizFailureBlock) {
+                bizFailureBlock(responseEntity);
             } else {
                 [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_BUSINESS_FAILURE object:responseEntity.message];
             }
@@ -205,14 +205,14 @@ static ZKNetworkManager *networkManager = nil;
 
 - (void)handleRequestFailureWithTask:(NSURLSessionDataTask *)task
                                error:(NSError *)error
-                      requestFailure:(ZKRequestFailureBlock)requestFailureBlock
+                      requestFailure:(ZKRequestFailureBlock)reqFailureBlock
                       eternalExecute:(ZKEternalExecuteBlock)eternalExecuteBlock
 {
-    if (requestFailureBlock) {
-        ZKResponseEntity *requestFailureEntity = [[ZKResponseEntity alloc]init];
-        requestFailureEntity.task = task;
-        requestFailureEntity.error = error;
-        requestFailureBlock(requestFailureEntity);
+    if (reqFailureBlock) {
+        ZKResponseEntity *reqFailureEntity = [[ZKResponseEntity alloc]init];
+        reqFailureEntity.task = task;
+        reqFailureEntity.error = error;
+        reqFailureBlock(reqFailureEntity);
     } else {
         [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_REQUEST_FAILURE object:kNetworkRequestFailureMessage];
     }

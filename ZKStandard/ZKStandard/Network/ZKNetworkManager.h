@@ -10,9 +10,9 @@
 
 @class ZKResponseEntity;
 
-typedef void (^ZKBusinessSuccessBlock) (ZKResponseEntity *businessSuccessEntity);   /* 业务成功 */
-typedef void (^ZKBusinessFailureBlock) (ZKResponseEntity *businessFailureEntity);   /* 业务失败 */
-typedef void (^ZKRequestFailureBlock) (ZKResponseEntity *requestFailureEntity);   /* 网络请求失败 */
+typedef void (^ZKBusinessSuccessBlock) (ZKResponseEntity *bizSuccessEntity);   /* 业务成功 */
+typedef void (^ZKBusinessFailureBlock) (ZKResponseEntity *bizFailureEntity);   /* 业务失败 */
+typedef void (^ZKRequestFailureBlock) (ZKResponseEntity *reqFailureEntity);   /* 网络请求失败 */
 typedef void (^ZKEternalExecuteBlock) ();   /* 无论业务成功与否，都会执行的Block */
 
 @interface ZKNetworkManager : AFHTTPSessionManager
@@ -29,34 +29,34 @@ typedef void (^ZKEternalExecuteBlock) ();   /* 无论业务成功与否，都会
 #pragma mark - Invisible Get & Invisible Post
 - (void)getRequestInvisiblyWithSubPath:(NSString *)subPath
                             parameters:(id)parameters
-                       businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock;
+                       businessSuccess:(ZKBusinessSuccessBlock)bizSuccessBlock;
 
 - (void)postRequestInvisiblyWithSubPath:(NSString *)subPath
                              parameters:(id)parameters
-                        businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock;
+                        businessSuccess:(ZKBusinessSuccessBlock)bizSuccessBlock;
 
 #pragma mark - Terse Get & Terse Post
 - (void)getRequestTerselyWithSubPath:(NSString *)subPath
                           parameters:(id)parameters
-                     businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock;
+                     businessSuccess:(ZKBusinessSuccessBlock)bizSuccessBlock;
 
 - (void)postRequestTerselyWithSubPath:(NSString *)subPath
                            parameters:(id)parameters
-                      businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock;
+                      businessSuccess:(ZKBusinessSuccessBlock)bizSuccessBlock;
 
 #pragma mark - Normal Get & Normal Post
 - (void)getRequestWithSubPath:(NSString *)subPath
                    parameters:(id)parameters
-              businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
-              businessFailure:(ZKBusinessFailureBlock)businessFailureBlock
-               requestFailure:(ZKRequestFailureBlock)requestFailureBlock
+              businessSuccess:(ZKBusinessSuccessBlock)bizSuccessBlock
+              businessFailure:(ZKBusinessFailureBlock)bizFailureBlock
+               requestFailure:(ZKRequestFailureBlock)reqFailureBlock
                eternalExecute:(ZKEternalExecuteBlock)eternalExecuteBlock;
 
 - (void)postRequestWithSubPath:(NSString *)subPath
                     parameters:(id)parameters
-               businessSuccess:(ZKBusinessSuccessBlock)businessSuccessBlock
-               businessFailure:(ZKBusinessFailureBlock)businessFailureBlock
-                requestFailure:(ZKRequestFailureBlock)requestFailureBlock
+               businessSuccess:(ZKBusinessSuccessBlock)bizSuccessBlock
+               businessFailure:(ZKBusinessFailureBlock)bizFailureBlock
+                requestFailure:(ZKRequestFailureBlock)reqFailureBlock
                 eternalExecute:(ZKEternalExecuteBlock)eternalExecuteBlock;
 
 

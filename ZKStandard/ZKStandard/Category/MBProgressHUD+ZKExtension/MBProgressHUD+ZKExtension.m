@@ -8,7 +8,7 @@
 
 #import "MBProgressHUD+ZKExtension.h"
 
-#define MBHUD_IMAGEVIEW(bundleName, imageName) [[UIImageView alloc]initWithImage:[[UIImage imageNamed:[NSString stringWithFormat:@"%@/%@", bundleName,imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]]
+#define MBHUD_IMAGEVIEW(bundleName, imageName) [[UIImageView alloc]initWithImage:[[UIImage imageNamed:[NSString stringWithFormat:@"%@/%@", (bundleName),(imageName)]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]]
 
 static NSString *kBundleName        = @"MBProgressHUD+ZKExtension.bundle";
 static NSString *kSuccessImageName  = @"Success";

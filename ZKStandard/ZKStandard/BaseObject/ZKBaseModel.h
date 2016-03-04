@@ -10,7 +10,24 @@
 #import "ZKAPIConstants.h"
 #import "ZKNetworkManager.h"
 
-@interface ZKBaseModel : NSObject
+typedef NS_ENUM(NSInteger, CallBackStatus){
+    CallbackBizSuccessStatus = 0,
+    CallbackBizFailureStatus = 1,
+    CallbackreqFailureStatus = 2,
+};
+
+@protocol ZKModelCallbackDelegate <NSObject>
+
+@optional
+- (void)callbackBizSuccessWithRequestName:(NSString *)name object:(id)object;
+
+- (void)callbackBizFailureWithRequestName:(NSString *)name object:(id)object;
+
+- (void)callbackReqFailureWithRequestName:(NSString *)name object:(id)object;
+
+@end
+
+@interface ZKBaseModel : NSObject<ZKModelCallbackDelegate>
 
 @property (strong, nonatomic) ZKNetworkManager *networkManager;
 

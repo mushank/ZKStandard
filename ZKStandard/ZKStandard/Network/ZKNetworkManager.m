@@ -63,7 +63,7 @@ static ZKNetworkManager *networkManager = nil;
                       parameters:parameters
                  businessSuccess:bizSuccessBlock
                  businessFailure:^(ZKResponseEntity *bizFailureEntity){}
-                  requestFailure:^(ZKResponseEntity *httpFailureEntity){}
+                  requestFailure:^(ZKResponseEntity *reqFailureEntity){}
                   eternalExecute:^(){}];
 }
 

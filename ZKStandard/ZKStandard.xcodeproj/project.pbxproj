@@ -10,6 +10,7 @@
 		42520DCB2510D14809BE8DE1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B16649E14AC5CD30F592746 /* libPods.a */; };
 		DD058B791C32E2ED0035EE6A /* ZKNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD058B781C32E2ED0035EE6A /* ZKNetworkManager.m */; };
 		DD058B7C1C32E4060035EE6A /* ZKResponseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD058B7B1C32E4060035EE6A /* ZKResponseEntity.m */; };
+		DD16E2B91C8D23CC00E07117 /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = DD16E2B81C8D23CC00E07117 /* UIViewController+DismissKeyboard.m */; };
 		DD178E4D1C87414B008511FA /* MBProgressHUD+ZKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DD178E4C1C87414B008511FA /* MBProgressHUD+ZKExtension.m */; };
 		DD17E71B1C858A8B006FF6EF /* ZKFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD17E71A1C858A8B006FF6EF /* ZKFileManager.m */; };
 		DD17E7221C858AD3006FF6EF /* ZKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DD17E7211C858AD3006FF6EF /* ZKUtils.m */; };
@@ -37,6 +38,8 @@
 		DD058B781C32E2ED0035EE6A /* ZKNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKNetworkManager.m; sourceTree = "<group>"; };
 		DD058B7A1C32E4060035EE6A /* ZKResponseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKResponseEntity.h; sourceTree = "<group>"; };
 		DD058B7B1C32E4060035EE6A /* ZKResponseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKResponseEntity.m; sourceTree = "<group>"; };
+		DD16E2B71C8D23CC00E07117 /* UIViewController+DismissKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissKeyboard.h"; sourceTree = "<group>"; };
+		DD16E2B81C8D23CC00E07117 /* UIViewController+DismissKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissKeyboard.m"; sourceTree = "<group>"; };
 		DD178E4B1C87414B008511FA /* MBProgressHUD+ZKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ZKExtension.h"; sourceTree = "<group>"; };
 		DD178E4C1C87414B008511FA /* MBProgressHUD+ZKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+ZKExtension.m"; sourceTree = "<group>"; };
 		DD17E7191C858A8B006FF6EF /* ZKFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKFileManager.h; sourceTree = "<group>"; };
@@ -113,6 +116,15 @@
 				DD2CFBAF1C33B48200DD3572 /* ZKNetworkUtils.m */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		DD16E2B61C8D23CC00E07117 /* UIViewController+DismissKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DD16E2B71C8D23CC00E07117 /* UIViewController+DismissKeyboard.h */,
+				DD16E2B81C8D23CC00E07117 /* UIViewController+DismissKeyboard.m */,
+			);
+			path = "UIViewController+DismissKeyboard";
 			sourceTree = "<group>";
 		};
 		DD178E471C874100008511FA /* MBProgressHUD+ZKExtension */ = {
@@ -210,6 +222,7 @@
 		DD6AC6BB1C2E51240014269E /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				DD16E2B61C8D23CC00E07117 /* UIViewController+DismissKeyboard */,
 				DD178E471C874100008511FA /* MBProgressHUD+ZKExtension */,
 			);
 			path = Category;
@@ -357,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD16E2B91C8D23CC00E07117 /* UIViewController+DismissKeyboard.m in Sources */,
 				DDD6C5441C2FB9C000741C38 /* ZKBaseViewController.m in Sources */,
 				DD17E7221C858AD3006FF6EF /* ZKUtils.m in Sources */,
 				DD178E4D1C87414B008511FA /* MBProgressHUD+ZKExtension.m in Sources */,

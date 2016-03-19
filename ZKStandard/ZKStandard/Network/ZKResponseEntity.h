@@ -18,7 +18,7 @@
 
 - (instancetype)initWithResponseDictionary:(NSDictionary *)responseDictionary;
 
-#pragma mark - Request Failure response property
+#pragma mark - Request Failure Response Property
 @property (strong, nonatomic) NSURLSessionDataTask *task;
 @property (strong, nonatomic) NSError *error;
 

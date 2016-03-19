@@ -22,6 +22,7 @@
 		DD32B4BE1C2E4D1C00D63A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD32B4BD1C2E4D1C00D63A04 /* Assets.xcassets */; };
 		DD32B4C11C2E4D1C00D63A04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD32B4BF1C2E4D1C00D63A04 /* LaunchScreen.storyboard */; };
 		DD6AC6C11C2E518A0014269E /* ZKConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD6AC6C01C2E518A0014269E /* ZKConfig.plist */; };
+		DDC074361C905716005B3455 /* ZKNetworkConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDC074351C905716005B3455 /* ZKNetworkConfig.plist */; };
 		DDD6C5381C2FB22100741C38 /* ZKBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD6C5371C2FB22100741C38 /* ZKBaseEntity.m */; };
 		DDD6C53B1C2FB8BE00741C38 /* ZKBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD6C53A1C2FB8BE00741C38 /* ZKBaseModel.m */; };
 		DDD6C53E1C2FB99A00741C38 /* ZKBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD6C53D1C2FB99A00741C38 /* ZKBaseNavigationController.m */; };
@@ -61,6 +62,7 @@
 		DD6AC6BF1C2E51470014269E /* ZKMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKMacros.h; sourceTree = "<group>"; };
 		DD6AC6C01C2E518A0014269E /* ZKConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZKConfig.plist; sourceTree = "<group>"; };
 		DD6AC6C21C2E52D10014269E /* ZKPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKPrefix.pch; sourceTree = "<group>"; };
+		DDC074351C905716005B3455 /* ZKNetworkConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZKNetworkConfig.plist; sourceTree = "<group>"; };
 		DDD6C5361C2FB22100741C38 /* ZKBaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKBaseEntity.h; sourceTree = "<group>"; };
 		DDD6C5371C2FB22100741C38 /* ZKBaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKBaseEntity.m; sourceTree = "<group>"; };
 		DDD6C5391C2FB8BE00741C38 /* ZKBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKBaseModel.h; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				DD058B781C32E2ED0035EE6A /* ZKNetworkManager.m */,
 				DD2CFBAE1C33B48200DD3572 /* ZKNetworkUtils.h */,
 				DD2CFBAF1C33B48200DD3572 /* ZKNetworkUtils.m */,
+				DDC074351C905716005B3455 /* ZKNetworkConfig.plist */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -231,8 +234,8 @@
 		DD6AC6BC1C2E51240014269E /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				DD6AC6BF1C2E51470014269E /* ZKMacros.h */,
 				DD6AC6C01C2E518A0014269E /* ZKConfig.plist */,
+				DD6AC6BF1C2E51470014269E /* ZKMacros.h */,
 				DD6AC6C21C2E52D10014269E /* ZKPrefix.pch */,
 			);
 			path = Config;
@@ -311,6 +314,7 @@
 				DD32B4BE1C2E4D1C00D63A04 /* Assets.xcassets in Resources */,
 				DDEC89891C889A2D005B9F97 /* MBProgressHUD+ZKExtension.bundle in Resources */,
 				DD32B4BC1C2E4D1C00D63A04 /* Main.storyboard in Resources */,
+				DDC074361C905716005B3455 /* ZKNetworkConfig.plist in Resources */,
 				DD6AC6C11C2E518A0014269E /* ZKConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

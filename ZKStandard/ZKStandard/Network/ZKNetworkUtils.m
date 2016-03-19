@@ -11,14 +11,14 @@
 
 @implementation ZKNetworkUtils
 
-static NSString *const kConfig = @"ZKConfig";   /* 配置文件名 */
-static NSString *const kPlist = @"plist";       /* 配置文件类型 */
+static NSString *const kConfig  = @"ZKNetworkConfig";    /* 配置文件名 */
+static NSString *const kPlist   = @"plist";   /* 配置文件类型 */
 
-static NSString *const kBaseServerSchema = @"Base Server Schema";    /* <ZKConfig.plish> 服务器Schema键值 */
-static NSString *const kBaseServerAddressDev    = @"Base Server Address Dev";   /* <ZKConfig.plish> 开发环境键值 */
-static NSString *const kBaseServerAddressTest   = @"Base Server Address Test";  /* <ZKConfig.plish> 测试环境键值 */
-static NSString *const kBaseServerAddressDis    = @"Base Server Address Dis";   /* <ZKConfig.plish> 生产环境键值 */
-static NSString *const kTimeoutInterval = @"Timeout Interval";      /* <ZKConfig.plish> 网络访问时限键值 */
+static NSString *const kBaseServerSchema        = @"Base Server Schema";   /* <ZKNetworkConfig.plish> 服务器Schema键值 */
+static NSString *const kBaseServerAddressDev    = @"Base Server Address Dev";  /* <ZKNetworkConfig.plish> 开发环境键值 */
+static NSString *const kBaseServerAddressTest   = @"Base Server Address Test";    /* <ZKNetworkConfig.plish> 测试环境键值 */
+static NSString *const kBaseServerAddressDis    = @"Base Server Address Dis";  /* <ZKNetworkConfig.plish> 生产环境键值 */
+static NSString *const kTimeoutInterval         = @"Timeout Interval";  /* <ZKNetworkConfig.plish> 网络访问时限键值 */
 
 
 + (NSString *)baseServerSchema
@@ -82,11 +82,11 @@ static NSString *const kTimeoutInterval = @"Timeout Interval";      /* <ZKConfig
 #pragma mark - Private Method
 + (id)readConfigObjectForKey:(NSString *)key
 {
-    NSString *configPath = [[NSBundle mainBundle]pathForResource:kConfig ofType:kPlist];
-    NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithContentsOfFile:configPath];
-    id returnValue = [dic objectForKey:key];
+    NSString *path = [[NSBundle mainBundle]pathForResource:kConfig ofType:kPlist];
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithContentsOfFile:path];
+    id value = [dic objectForKey:key];
     
-    return returnValue;
+    return value;
 }
 
 

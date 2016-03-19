@@ -11,32 +11,39 @@
 @interface ZKFileManager : NSObject
 
 /**
- *  @method             sharedManager
- *  @abstract           share fileManager
- *  @discussion
- *  @param              NULL
- *  @param result       return ZKFileManager Singleton
+ *  Shared fileManager
+ *
+ *  @return ZKFileManager Singleton
  */
 + (ZKFileManager *)sharedManager;
 
 /**
- *  @method             readFromBundleFile
- *  @abstract           read data from bundle file
- *  @discussion
- *  @param fileName     file name
- *  @param fileType     file type
- *  @param result       return NSMutableDictionary
+ *  Read specified value from bundle file
+ *
+ *  @param key      key
+ *  @param fileName file name
+ *  @param fileType file type
+ *
+ *  @return id
  */
-- (NSMutableDictionary *)readFromBundleFile:(NSString *)fileName withType:(NSString *)fileType;
+- (id)readValueForKey:(NSString *)key fromBundleFile:(NSString *)fileName withType:(NSString *)fileType;
 
 /**
- *  @method             writeData
- *  @abstract           write data to file in bundle
- *  @discussion
- *  @param writtenData  data to be written
- *  @param fileName     file name
- *  @param fileType     file type
- *  @param result       void
+ *  Read data from bundle file
+ *
+ *  @param fileName file name
+ *  @param fileType file type
+ *
+ *  @return NSMutableDictionary
+ */
+- (NSMutableDictionary *)readDataFromBundleFile:(NSString *)fileName withType:(NSString *)fileType;
+
+/**
+ *  write data to file in bundle
+ *
+ *  @param writtenData data to be written
+ *  @param fileName    file name
+ *  @param fileType    file type
  */
 - (void)writeData:(NSMutableDictionary *)writtenData toBundleFile:(NSString *)fileName withType:(NSString *)fileType;
 

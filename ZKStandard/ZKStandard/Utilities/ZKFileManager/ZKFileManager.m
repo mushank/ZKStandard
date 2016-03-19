@@ -21,7 +21,15 @@ static ZKFileManager *fileManager = nil;
     return fileManager;
 }
 
-- (NSMutableDictionary *)readFromBundleFile:(NSString *)fileName withType:(NSString *)fileType;
+- (id)readValueForKey:(NSString *)key fromBundleFile:(NSString *)fileName withType:(NSString *)fileType
+{
+    NSMutableDictionary *fileData = [self readDataFromBundleFile:fileName withType:fileType];
+    id object = [fileData objectForKey:key];
+    
+    return object;
+}
+
+- (NSMutableDictionary *)readDataFromBundleFile:(NSString *)fileName withType:(NSString *)fileType
 {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:fileType];
     NSMutableDictionary *returnData = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];

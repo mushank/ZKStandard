@@ -34,7 +34,7 @@
 - (void)addBackButton
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setFrame:CGRectMake(0, 0, 20.0, 44.0)];
+    [button setFrame:CGRectMake(0, 0, 35.0, 35.0)];
     [button setImage:[UIImage imageNamed:@"BackButtonImage"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(backButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     

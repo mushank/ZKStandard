@@ -36,6 +36,9 @@
 #define ZK_NOTI_NETWORK_SESSION_EXPIRED     @"ZK_NOTI_NETWORK_SESSION_EXPIRED"
 #define ZK_NOTI_NETWORK_TOKEN_EXPIRED       @"ZK_NOTI_NETWORK_TOKEN_EXPIRED"
 
+#define ZK_TOKEN [[NSUserDefaults standardUserDefaults] objectForKey:@"token"]
+
+
 // ==================== Func Define ====================
 #define ZK_IS_NULL(string)  (!(string) || [(string) isEqual: @""])
 #define ZK_COLOR_FROM_RGB(RGBValue) [UIColor colorWithRed:((float)(((RGBValue) & 0xFF0000) >> 16)) / 255.0 green:((float)(((RGBValue) & 0xFF00) >> 8))/255.0 blue:((float)((RGBValue) & 0xFF))/255.0 alpha:1.0]

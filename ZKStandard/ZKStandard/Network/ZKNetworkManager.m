@@ -103,7 +103,7 @@ static ZKNetworkManager *networkManager = nil;
     if (![self isReachable]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:ZK_NOTI_NETWORK_REQUEST_FAILURE object:kNetworkNotReachableMessage];
     }
-    [self.requestSerializer setValue:TOKEN forHTTPHeaderField:@"Token"];
+    [self.requestSerializer setValue:ZK_TOKEN forHTTPHeaderField:@"Token"];
     
     [self GET:subPath
    parameters:parameters
@@ -138,7 +138,7 @@ static ZKNetworkManager *networkManager = nil;
     if (![self isReachable]) {
         [[NSNotificationCenter defaultCenter]postNotificationName:ZK_NOTI_NETWORK_REQUEST_FAILURE object:kNetworkNotReachableMessage];
     }
-    [self.requestSerializer setValue:TOKEN forHTTPHeaderField:@"Token"];
+    [self.requestSerializer setValue:ZK_TOKEN forHTTPHeaderField:@"Token"];
     
     [self POST:subPath
     parameters:parameters

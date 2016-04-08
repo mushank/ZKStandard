@@ -63,7 +63,7 @@
     NSDictionary *parameters = @{@""    : @"parameter",
                                  @""    : @"parameter",
                                  };
-    [self.networkManager getRequestWithSubPath:GET_TOKEN parameters:parameters
+    [self.networkManager getRequestEntirelyWithSubPath:GET_TOKEN parameters:parameters
                                businessSuccess:^(ZKResponseEntity *bizSuccessEntity){
                                    // business succeeded, do sth.
                                    [[NSNotificationCenter defaultCenter] postNotificationName:GET_TOKEN object:nil];
@@ -76,7 +76,7 @@
                                     // request failed, do sth.
                                     [self retryGetToken];
                                 }
-                                eternalExecute:^(){
+                                eternalExecute:^(id object){
                                     // whatever, eternal execute block.
                                 }];
 }

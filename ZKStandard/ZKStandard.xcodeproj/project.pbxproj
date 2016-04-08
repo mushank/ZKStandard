@@ -184,12 +184,6 @@
 				DD6AC6BE1C2E51240014269E /* Utilities */,
 				DD6AC6BA1C2E51240014269E /* BaseObject */,
 				DD6AC6BC1C2E51240014269E /* Config */,
-				DD32B4BF1C2E4D1C00D63A04 /* LaunchScreen.storyboard */,
-				DD32B4BA1C2E4D1C00D63A04 /* Main.storyboard */,
-				DD32B4B71C2E4D1C00D63A04 /* ViewController.h */,
-				DD32B4B81C2E4D1C00D63A04 /* ViewController.m */,
-				DD32B4B41C2E4D1C00D63A04 /* AppDelegate.h */,
-				DD32B4B51C2E4D1C00D63A04 /* AppDelegate.m */,
 				DD32B4BD1C2E4D1C00D63A04 /* Assets.xcassets */,
 				DD32B4B11C2E4D1C00D63A04 /* Supporting Files */,
 			);
@@ -199,6 +193,12 @@
 		DD32B4B11C2E4D1C00D63A04 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DD32B4BF1C2E4D1C00D63A04 /* LaunchScreen.storyboard */,
+				DD32B4BA1C2E4D1C00D63A04 /* Main.storyboard */,
+				DD32B4B71C2E4D1C00D63A04 /* ViewController.h */,
+				DD32B4B81C2E4D1C00D63A04 /* ViewController.m */,
+				DD32B4B41C2E4D1C00D63A04 /* AppDelegate.h */,
+				DD32B4B51C2E4D1C00D63A04 /* AppDelegate.m */,
 				DD32B4C21C2E4D1C00D63A04 /* Info.plist */,
 				DD32B4B21C2E4D1C00D63A04 /* main.m */,
 			);

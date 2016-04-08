@@ -18,17 +18,23 @@
 #endif /* __OPTIMIZE__ */
 
 // ==================== Device Info ====================
+#define ZK_MODEL                    [[UIDevice currentDevice] model]
+#define ZK_SYSTEM_VERSION           ([[UIDevice currentDevice] systemVersion])
+
+#define ZK_IOS7_OR_LATER            ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+#define ZK_IOS8_OR_LATER            ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+#define ZK_IOS9_OR_LATER            ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
+
 #define ZK_SCREEN_WIDTH             UIScreen.mainScreen.bounds.size.width
 #define ZK_SCREEN_HEIGHT            UIScreen.mainScreen.bounds.size.height
 #define ZK_STATUSBAR_HEIGHT             20.0
 #define ZK_NAVIGATIONBAR_HEIGTH         44.0
 #define ZK_TABBAR_HEIGHT                49.0
 #define ZK_STATUS_NAVIGATION_BAR_HEIGHT 64.0
-#define ZK_VERSION                  [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"]
-#define ZK_IS_IPHONE                [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone
-#define ZK_IOS7_OR_LATER            ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
-#define ZK_IOS8_OR_LATER            ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
-#define ZK_IOS9_OR_LATER            ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
+
+// ==================== App Info ====================
+#define ZK_APP_BUNDLEID                [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleIdentifier"]
+#define ZK_APP_VERSION              [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"]
 
 // ==================== Network Define ====================
 #define ZK_NOTI_NETWORK_REQUEST_FAILURE     @"ZK_NOTI_NETWORK_REQUEST_FAILURE"
@@ -36,7 +42,8 @@
 #define ZK_NOTI_NETWORK_SESSION_EXPIRED     @"ZK_NOTI_NETWORK_SESSION_EXPIRED"
 #define ZK_NOTI_NETWORK_TOKEN_EXPIRED       @"ZK_NOTI_NETWORK_TOKEN_EXPIRED"
 
-#define ZK_TOKEN [[NSUserDefaults standardUserDefaults] objectForKey:@"token"]
+#define ZK_TOKEN            [[NSUserDefaults standardUserDefaults] objectForKey:@"ZK_TOKEN"]
+#define ZK_TOKEN_IDENTIFIER @"ZK_TOKEN_IDENTIFIER"
 
 
 // ==================== Func Define ====================

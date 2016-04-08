@@ -22,4 +22,7 @@
 @property (strong, nonatomic) NSURLSessionDataTask *task;
 @property (strong, nonatomic) NSError *error;
 
+#pragma mark - Eternal Execute Response Property
+@property (strong, nonatomic) id responseObject;
+
 @end

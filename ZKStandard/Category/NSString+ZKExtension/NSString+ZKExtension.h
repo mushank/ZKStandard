@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZKUtils.h"
 
 @interface NSString (ZKExtension)
 

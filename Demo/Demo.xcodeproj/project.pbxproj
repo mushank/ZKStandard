@@ -91,6 +91,7 @@
 		DD1DFAF11CEA0F050006D49D /* ZKFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKFileManager.m; sourceTree = "<group>"; };
 		DD1DFAF31CEA0F050006D49D /* ZKUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKUtils.h; sourceTree = "<group>"; };
 		DD1DFAF41CEA0F050006D49D /* ZKUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKUtils.m; sourceTree = "<group>"; };
+		DD1DFB091CEA14390006D49D /* ZKStandard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKStandard.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +161,7 @@
 		DD1DFABE1CEA0F050006D49D /* ZKStandard */ = {
 			isa = PBXGroup;
 			children = (
+				DD1DFB091CEA14390006D49D /* ZKStandard.h */,
 				DD1DFABF1CEA0F050006D49D /* BaseObject */,
 				DD1DFACC1CEA0F050006D49D /* Category */,
 				DD1DFAE61CEA0F050006D49D /* Network */,
@@ -172,10 +174,10 @@
 		DD1DFABF1CEA0F050006D49D /* BaseObject */ = {
 			isa = PBXGroup;
 			children = (
-				DD1DFAC01CEA0F050006D49D /* ZKBaseEntity.h */,
-				DD1DFAC11CEA0F050006D49D /* ZKBaseEntity.m */,
 				DD1DFAC21CEA0F050006D49D /* ZKBaseModel.h */,
 				DD1DFAC31CEA0F050006D49D /* ZKBaseModel.m */,
+				DD1DFAC01CEA0F050006D49D /* ZKBaseEntity.h */,
+				DD1DFAC11CEA0F050006D49D /* ZKBaseEntity.m */,
 				DD1DFAC61CEA0F050006D49D /* ZKTableView.h */,
 				DD1DFAC71CEA0F050006D49D /* ZKTableView.m */,
 				DD1DFACA1CEA0F050006D49D /* ZKViewController.h */,
@@ -272,12 +274,12 @@
 			isa = PBXGroup;
 			children = (
 				DD1DFAE71CEA0F050006D49D /* ZKAPIConstants.h */,
-				DD1DFAE81CEA0F050006D49D /* ZKNetworkUtils.h */,
-				DD1DFAE91CEA0F050006D49D /* ZKNetworkUtils.m */,
-				DD1DFAEA1CEA0F050006D49D /* ZKRequestManager.h */,
-				DD1DFAEB1CEA0F050006D49D /* ZKRequestManager.m */,
 				DD1DFAEC1CEA0F050006D49D /* ZKResponseEntity.h */,
 				DD1DFAED1CEA0F050006D49D /* ZKResponseEntity.m */,
+				DD1DFAEA1CEA0F050006D49D /* ZKRequestManager.h */,
+				DD1DFAEB1CEA0F050006D49D /* ZKRequestManager.m */,
+				DD1DFAE81CEA0F050006D49D /* ZKNetworkUtils.h */,
+				DD1DFAE91CEA0F050006D49D /* ZKNetworkUtils.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";

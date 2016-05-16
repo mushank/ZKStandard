@@ -15,6 +15,8 @@ Before using, you need to set your project `Prefix Header` value as `$(SRCROOT)/
 
 ## 3. Source files
 
+- ZKStandard.h
+
 #### BaseObject
 
 - ZKBaseModel

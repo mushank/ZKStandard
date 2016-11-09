@@ -3,13 +3,13 @@ A basic framework for iOS App written in Objective-C
 
 ## 1. Install
 
-```
-pod 'ZKStandard', '~> 1.0'
-```
+**Install manually, download the source folder `ZKStandard` and drag it into your project.**
+
+⚠️***Attention:*** *I noticed that in most cases you will tend to add your own code to this framework, so I have removed the cocoapods installation way. Please install manually instead*
 
 ## 2. Usage
 
-Before using, you need to set your project `Prefix Header` value as `$(SRCROOT)/ZKStandard/Config/ZKPrefix.pch`
+Set your project `Prefix Header` value as `$(SRCROOT)/ZKStandard/Config/ZKPrefix.pch` and then begin your coding.
 
 > TARGETS -> Build Settings -> Apple LLVM 7.1 - Language -> Prefix Header
 

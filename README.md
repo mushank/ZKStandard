@@ -5,7 +5,7 @@ A basic framework for iOS App written in Objective-C
 
 **Install manually, download the source folder `ZKStandard` and drag it into your project.**
 
-⚠️***Attention:*** *I noticed that in most cases you will tend to add your own code to this framework, so I have removed the cocoapods installation way. Please install manually instead*
+⚠️***Attention:*** *I noticed that in most cases you will tend to customize this framework, I have removed the cocoapods installation way. Please install manually instead*
 
 ## 2. Usage
 

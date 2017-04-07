@@ -2,8 +2,8 @@
 //  ZKPrefix.pch
 //  ZKStandard
 //
-//  Created by Jack on 12/26/15.
-//  Copyright © 2015 mushank. All rights reserved.
+//  Created by Jack on 10/21/16.
+//  Copyright © 2016 mushank. All rights reserved.
 //
 
 #ifndef ZKPrefix_pch
@@ -17,9 +17,6 @@
 
 #ifdef __OBJC__
 
-/**
- *  ZKStandard Headers
- */
 #import "ZKStandard.h"
 
 #endif

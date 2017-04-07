@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  Demo
+//  ZKStandard
 //
-//  Created by Jack on 5/16/16.
+//  Created by Jack on 10/21/16.
 //  Copyright © 2016 mushank. All rights reserved.
 //
 

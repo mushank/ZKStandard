@@ -1,43 +1,43 @@
 //
 //  ZKStandard.h
-//  Demo
+//  ZKStandard
 //
-//  Created by Jack on 5/16/16.
+//  https://github.com/mushank/ZKStandard
+//
+//  Created by Jack on 11/1/16.
 //  Copyright © 2016 mushank. All rights reserved.
 //
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
 
 #ifndef ZKStandard_h
 #define ZKStandard_h
 
-#pragma mark - BaseObject
-#import "ZKBaseModel.h"
-#import "ZKBaseEntity.h"
-#import "ZKTableView.h"
-#import "ZKViewController.h"
-#import "ZKTableViewController.h"
-#import "ZKNavigationController.h"
+#pragma mark - APIManager
+#import "ZKAPIConst.h"
+#import "ZKAPIManager.h"
 
-#pragma mark - Category
-#import "NSString+ZKExtension.h"
-#import "NSDate+ZKExtension.h"
-#import "NSArray+ZKExtension.h"
-#import "NSDictionary+ZKExtension.h"
-#import "NSMutableDictionary+ZKExtension.h"
-#import "UIViewController+ZKExtension.h"
-#import "MBProgressHUD+ZKExtension.h"
-
-#pragma mark - Network
-#import "ZKAPIConstants.h"
-#import "ZKResponseEntity.h"
-#import "ZKRequestManager.h"
-#import "ZKNetworkUtils.h"
+#pragma mark - LocationManager
+#import "ZKLocationManager.h"
 
 #pragma mark - Utilities
-#import "ZKUtils.h"
-#import "ZKFileManager.h"
-
-#pragma mark - Config
 #import "ZKMacros.h"
-
+#import "ZKUtils.h"
+#import "ZKAppContext.h"
 
 #endif /* ZKStandard_h */

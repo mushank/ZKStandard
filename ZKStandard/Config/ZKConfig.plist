@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   ZKConfig.plist
+   Demo
+
+   Created by Jack on 11/1/16.
+   Copyright (c) 2016 mushank. All rights reserved.
+-->
 <plist version="1.0">
-<dict>
-	<key>Base Server Schema</key>
-	<string>https://</string>
-	<key>Base Server Address Dev</key>
-	<string>124.160.91.86</string>
-	<key>Base Server Address Dis</key>
-	<string>124.160.91.86</string>
-	<key>Timeout Interval</key>
-	<integer>30</integer>
-</dict>
+    <dict>
+    
+    </dict>
 </plist>

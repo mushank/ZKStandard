@@ -10,6 +10,8 @@
 
 @interface ZKAppContext : NSObject
 
++ (instancetype)shareInstance;
+
 /* 除去声明为readonly的Property，都需要外部进行赋值 */
 #pragma mark - Device Info
 @property (nonatomic, copy, readonly) NSString *deviceName;

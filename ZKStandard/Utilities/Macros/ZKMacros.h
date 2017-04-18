@@ -22,7 +22,6 @@
 #define ZK_RGBA(RGB, A)         [UIColor colorWithRed:((float)(((RGB) & 0xFF0000) >> 16)) / 255.0 green:((float)(((RGB) & 0xFF00) >> 8)) / 255.0 blue:((float)((RGB) & 0xFF)) / 255.0 alpha:A]
 
 // ==================== Device Info ====================
-#define ZK_SYSTEM_VERSION   [[UIDevice currentDevice] systemVersion]
 #define ZK_SCREEN_WIDTH     UIScreen.mainScreen.bounds.size.width
 #define ZK_SCREEN_HEIGHT    UIScreen.mainScreen.bounds.size.height
 

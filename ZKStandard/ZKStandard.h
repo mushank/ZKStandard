@@ -28,16 +28,18 @@
 #ifndef ZKStandard_h
 #define ZKStandard_h
 
-#pragma mark - APIManager
+#pragma mark - Manager
+
+// App context
+#import "ZKAppContext.h"
+// API
 #import "ZKAPIConst.h"
 #import "ZKAPIManager.h"
-
-#pragma mark - LocationManager
+// Location
 #import "ZKLocationManager.h"
 
 #pragma mark - Utilities
 #import "ZKMacros.h"
 #import "ZKUtils.h"
-#import "ZKAppContext.h"
 
 #endif /* ZKStandard_h */

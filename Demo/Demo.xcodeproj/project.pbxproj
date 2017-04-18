@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0412CDC01EA5B9D0008D344C /* ZKConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0412CDA81EA5B9CF008D344C /* ZKConfig.plist */; };
+		0412CDC41EA5B9D0008D344C /* ZKAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412CDB41EA5B9D0008D344C /* ZKAppContext.m */; };
+		0412CDC51EA5B9D0008D344C /* ZKLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412CDB81EA5B9D0008D344C /* ZKLocationManager.m */; };
+		0412CDC61EA5B9D0008D344C /* ZKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412CDBE1EA5B9D0008D344C /* ZKUtils.m */; };
+		0412CDCE1EA5BB19008D344C /* ZKAPIConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412CDC91EA5BB19008D344C /* ZKAPIConst.m */; };
+		0412CDCF1EA5BB19008D344C /* ZKAPIManager+Auth.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412CDCB1EA5BB19008D344C /* ZKAPIManager+Auth.m */; };
+		0412CDD01EA5BB19008D344C /* ZKAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412CDCD1EA5BB19008D344C /* ZKAPIManager.m */; };
 		0418CC541DB9C21F00C7BED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0418CC531DB9C21F00C7BED3 /* main.m */; };
 		0418CC571DB9C21F00C7BED3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0418CC561DB9C21F00C7BED3 /* AppDelegate.m */; };
 		0418CC5A1DB9C21F00C7BED3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0418CC591DB9C21F00C7BED3 /* ViewController.m */; };
 		0418CC5D1DB9C21F00C7BED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0418CC5B1DB9C21F00C7BED3 /* Main.storyboard */; };
 		0418CC5F1DB9C21F00C7BED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0418CC5E1DB9C21F00C7BED3 /* Assets.xcassets */; };
 		0418CC621DB9C21F00C7BED3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0418CC601DB9C21F00C7BED3 /* LaunchScreen.storyboard */; };
-		04636C4A1E4C18580020A9DA /* ZKAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 04636C491E4C18580020A9DA /* ZKAppContext.m */; };
-		046B78751DCDDBB800BBA571 /* ZKAPIConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 046B784C1DCDDBB800BBA571 /* ZKAPIConst.m */; };
-		046B78761DCDDBB800BBA571 /* ZKAPIManager+Auth.m in Sources */ = {isa = PBXBuildFile; fileRef = 046B784E1DCDDBB800BBA571 /* ZKAPIManager+Auth.m */; };
-		046B78771DCDDBB800BBA571 /* ZKAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 046B78501DCDDBB800BBA571 /* ZKAPIManager.m */; };
-		046B78781DCDDBB800BBA571 /* ZKConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046B78521DCDDBB800BBA571 /* ZKConfig.plist */; };
-		046B78841DCDDBB800BBA571 /* ZKLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 046B786D1DCDDBB800BBA571 /* ZKLocationManager.m */; };
-		046B78851DCDDBB800BBA571 /* ZKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 046B78731DCDDBB800BBA571 /* ZKUtils.m */; };
 		BE7C3E59781CE28F40E9BF26 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126322452767216948B28427 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0412CDA81EA5B9CF008D344C /* ZKConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZKConfig.plist; sourceTree = "<group>"; };
+		0412CDA91EA5B9CF008D344C /* ZKPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKPrefix.pch; sourceTree = "<group>"; };
+		0412CDB31EA5B9D0008D344C /* ZKAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKAppContext.h; sourceTree = "<group>"; };
+		0412CDB41EA5B9D0008D344C /* ZKAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKAppContext.m; sourceTree = "<group>"; };
+		0412CDB71EA5B9D0008D344C /* ZKLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKLocationManager.h; sourceTree = "<group>"; };
+		0412CDB81EA5B9D0008D344C /* ZKLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKLocationManager.m; sourceTree = "<group>"; };
+		0412CDBB1EA5B9D0008D344C /* ZKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKMacros.h; sourceTree = "<group>"; };
+		0412CDBD1EA5B9D0008D344C /* ZKUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKUtils.h; sourceTree = "<group>"; };
+		0412CDBE1EA5B9D0008D344C /* ZKUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKUtils.m; sourceTree = "<group>"; };
+		0412CDBF1EA5B9D0008D344C /* ZKStandard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKStandard.h; sourceTree = "<group>"; };
+		0412CDC81EA5BB19008D344C /* ZKAPIConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKAPIConst.h; sourceTree = "<group>"; };
+		0412CDC91EA5BB19008D344C /* ZKAPIConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKAPIConst.m; sourceTree = "<group>"; };
+		0412CDCA1EA5BB19008D344C /* ZKAPIManager+Auth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZKAPIManager+Auth.h"; sourceTree = "<group>"; };
+		0412CDCB1EA5BB19008D344C /* ZKAPIManager+Auth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZKAPIManager+Auth.m"; sourceTree = "<group>"; };
+		0412CDCC1EA5BB19008D344C /* ZKAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKAPIManager.h; sourceTree = "<group>"; };
+		0412CDCD1EA5BB19008D344C /* ZKAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKAPIManager.m; sourceTree = "<group>"; };
 		0418CC4F1DB9C21F00C7BED3 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0418CC531DB9C21F00C7BED3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0418CC551DB9C21F00C7BED3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -34,22 +50,6 @@
 		0418CC5E1DB9C21F00C7BED3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Demo/Assets.xcassets; sourceTree = "<group>"; };
 		0418CC611DB9C21F00C7BED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0418CC631DB9C21F00C7BED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04636C481E4C18580020A9DA /* ZKAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKAppContext.h; sourceTree = "<group>"; };
-		04636C491E4C18580020A9DA /* ZKAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKAppContext.m; sourceTree = "<group>"; };
-		046B784B1DCDDBB800BBA571 /* ZKAPIConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKAPIConst.h; sourceTree = "<group>"; };
-		046B784C1DCDDBB800BBA571 /* ZKAPIConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKAPIConst.m; sourceTree = "<group>"; };
-		046B784D1DCDDBB800BBA571 /* ZKAPIManager+Auth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZKAPIManager+Auth.h"; sourceTree = "<group>"; };
-		046B784E1DCDDBB800BBA571 /* ZKAPIManager+Auth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZKAPIManager+Auth.m"; sourceTree = "<group>"; };
-		046B784F1DCDDBB800BBA571 /* ZKAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKAPIManager.h; sourceTree = "<group>"; };
-		046B78501DCDDBB800BBA571 /* ZKAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKAPIManager.m; sourceTree = "<group>"; };
-		046B78521DCDDBB800BBA571 /* ZKConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZKConfig.plist; sourceTree = "<group>"; };
-		046B78531DCDDBB800BBA571 /* ZKPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKPrefix.pch; sourceTree = "<group>"; };
-		046B786C1DCDDBB800BBA571 /* ZKLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKLocationManager.h; sourceTree = "<group>"; };
-		046B786D1DCDDBB800BBA571 /* ZKLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKLocationManager.m; sourceTree = "<group>"; };
-		046B78701DCDDBB800BBA571 /* ZKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKMacros.h; sourceTree = "<group>"; };
-		046B78721DCDDBB800BBA571 /* ZKUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKUtils.h; sourceTree = "<group>"; };
-		046B78731DCDDBB800BBA571 /* ZKUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKUtils.m; sourceTree = "<group>"; };
-		046B78741DCDDBB800BBA571 /* ZKStandard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKStandard.h; sourceTree = "<group>"; };
 		126322452767216948B28427 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00893032726CD02CBF4ACC6 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D300651A8D9625DD8B721A6C /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +67,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0412CDA61EA5B9CF008D344C /* ZKStandard */ = {
+			isa = PBXGroup;
+			children = (
+				0412CDBF1EA5B9D0008D344C /* ZKStandard.h */,
+				0412CDAA1EA5B9CF008D344C /* Manager */,
+				0412CDB91EA5B9D0008D344C /* Utilities */,
+				0412CDA71EA5B9CF008D344C /* Config */,
+			);
+			name = ZKStandard;
+			path = ../../ZKStandard;
+			sourceTree = "<group>";
+		};
+		0412CDA71EA5B9CF008D344C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				0412CDA81EA5B9CF008D344C /* ZKConfig.plist */,
+				0412CDA91EA5B9CF008D344C /* ZKPrefix.pch */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		0412CDAA1EA5B9CF008D344C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0412CDB21EA5B9D0008D344C /* AppContext */,
+				0412CDC71EA5BB19008D344C /* APIManager */,
+				0412CDB61EA5B9D0008D344C /* LocationManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		0412CDB21EA5B9D0008D344C /* AppContext */ = {
+			isa = PBXGroup;
+			children = (
+				0412CDB31EA5B9D0008D344C /* ZKAppContext.h */,
+				0412CDB41EA5B9D0008D344C /* ZKAppContext.m */,
+			);
+			path = AppContext;
+			sourceTree = "<group>";
+		};
+		0412CDB61EA5B9D0008D344C /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				0412CDB71EA5B9D0008D344C /* ZKLocationManager.h */,
+				0412CDB81EA5B9D0008D344C /* ZKLocationManager.m */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		0412CDB91EA5B9D0008D344C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0412CDBA1EA5B9D0008D344C /* Macros */,
+				0412CDBC1EA5B9D0008D344C /* Utils */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0412CDBA1EA5B9D0008D344C /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				0412CDBB1EA5B9D0008D344C /* ZKMacros.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		0412CDBC1EA5B9D0008D344C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0412CDBD1EA5B9D0008D344C /* ZKUtils.h */,
+				0412CDBE1EA5B9D0008D344C /* ZKUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0412CDC71EA5BB19008D344C /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				0412CDC81EA5BB19008D344C /* ZKAPIConst.h */,
+				0412CDC91EA5BB19008D344C /* ZKAPIConst.m */,
+				0412CDCC1EA5BB19008D344C /* ZKAPIManager.h */,
+				0412CDCD1EA5BB19008D344C /* ZKAPIManager.m */,
+				0412CDCA1EA5BB19008D344C /* ZKAPIManager+Auth.h */,
+				0412CDCB1EA5BB19008D344C /* ZKAPIManager+Auth.m */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
 		0418CC461DB9C21E00C7BED3 = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +181,7 @@
 				0418CC561DB9C21F00C7BED3 /* AppDelegate.m */,
 				0418CC581DB9C21F00C7BED3 /* ViewController.h */,
 				0418CC591DB9C21F00C7BED3 /* ViewController.m */,
-				046B78491DCDDBB800BBA571 /* ZKStandard */,
+				0412CDA61EA5B9CF008D344C /* ZKStandard */,
 				0418CC521DB9C21F00C7BED3 /* Supporting Files */,
 			);
 			path = Demo;
@@ -108,86 +196,6 @@
 				0418CC531DB9C21F00C7BED3 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		04636C471E4B2F570020A9DA /* AppContext */ = {
-			isa = PBXGroup;
-			children = (
-				04636C481E4C18580020A9DA /* ZKAppContext.h */,
-				04636C491E4C18580020A9DA /* ZKAppContext.m */,
-			);
-			path = AppContext;
-			sourceTree = "<group>";
-		};
-		046B78491DCDDBB800BBA571 /* ZKStandard */ = {
-			isa = PBXGroup;
-			children = (
-				046B78741DCDDBB800BBA571 /* ZKStandard.h */,
-				046B784A1DCDDBB800BBA571 /* APIManager */,
-				046B786B1DCDDBB800BBA571 /* LocationManager */,
-				046B786E1DCDDBB800BBA571 /* Utilities */,
-				046B78511DCDDBB800BBA571 /* Config */,
-			);
-			name = ZKStandard;
-			path = ../../ZKStandard;
-			sourceTree = "<group>";
-		};
-		046B784A1DCDDBB800BBA571 /* APIManager */ = {
-			isa = PBXGroup;
-			children = (
-				046B784B1DCDDBB800BBA571 /* ZKAPIConst.h */,
-				046B784C1DCDDBB800BBA571 /* ZKAPIConst.m */,
-				046B784F1DCDDBB800BBA571 /* ZKAPIManager.h */,
-				046B78501DCDDBB800BBA571 /* ZKAPIManager.m */,
-				046B784D1DCDDBB800BBA571 /* ZKAPIManager+Auth.h */,
-				046B784E1DCDDBB800BBA571 /* ZKAPIManager+Auth.m */,
-			);
-			path = APIManager;
-			sourceTree = "<group>";
-		};
-		046B78511DCDDBB800BBA571 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				046B78521DCDDBB800BBA571 /* ZKConfig.plist */,
-				046B78531DCDDBB800BBA571 /* ZKPrefix.pch */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		046B786B1DCDDBB800BBA571 /* LocationManager */ = {
-			isa = PBXGroup;
-			children = (
-				046B786C1DCDDBB800BBA571 /* ZKLocationManager.h */,
-				046B786D1DCDDBB800BBA571 /* ZKLocationManager.m */,
-			);
-			path = LocationManager;
-			sourceTree = "<group>";
-		};
-		046B786E1DCDDBB800BBA571 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				046B786F1DCDDBB800BBA571 /* Macros */,
-				04636C471E4B2F570020A9DA /* AppContext */,
-				046B78711DCDDBB800BBA571 /* Utils */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		046B786F1DCDDBB800BBA571 /* Macros */ = {
-			isa = PBXGroup;
-			children = (
-				046B78701DCDDBB800BBA571 /* ZKMacros.h */,
-			);
-			path = Macros;
-			sourceTree = "<group>";
-		};
-		046B78711DCDDBB800BBA571 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				046B78721DCDDBB800BBA571 /* ZKUtils.h */,
-				046B78731DCDDBB800BBA571 /* ZKUtils.m */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		C600648E9631F58DB464BADA /* Frameworks */ = {
@@ -271,7 +279,7 @@
 				0418CC621DB9C21F00C7BED3 /* LaunchScreen.storyboard in Resources */,
 				0418CC5F1DB9C21F00C7BED3 /* Assets.xcassets in Resources */,
 				0418CC5D1DB9C21F00C7BED3 /* Main.storyboard in Resources */,
-				046B78781DCDDBB800BBA571 /* ZKConfig.plist in Resources */,
+				0412CDC01EA5B9D0008D344C /* ZKConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,15 +338,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0412CDC41EA5B9D0008D344C /* ZKAppContext.m in Sources */,
 				0418CC5A1DB9C21F00C7BED3 /* ViewController.m in Sources */,
-				046B78751DCDDBB800BBA571 /* ZKAPIConst.m in Sources */,
-				046B78761DCDDBB800BBA571 /* ZKAPIManager+Auth.m in Sources */,
-				046B78841DCDDBB800BBA571 /* ZKLocationManager.m in Sources */,
-				046B78771DCDDBB800BBA571 /* ZKAPIManager.m in Sources */,
-				046B78851DCDDBB800BBA571 /* ZKUtils.m in Sources */,
-				04636C4A1E4C18580020A9DA /* ZKAppContext.m in Sources */,
+				0412CDCE1EA5BB19008D344C /* ZKAPIConst.m in Sources */,
+				0412CDD01EA5BB19008D344C /* ZKAPIManager.m in Sources */,
+				0412CDC61EA5B9D0008D344C /* ZKUtils.m in Sources */,
 				0418CC571DB9C21F00C7BED3 /* AppDelegate.m in Sources */,
+				0412CDCF1EA5BB19008D344C /* ZKAPIManager+Auth.m in Sources */,
 				0418CC541DB9C21F00C7BED3 /* main.m in Sources */,
+				0412CDC51EA5B9D0008D344C /* ZKLocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

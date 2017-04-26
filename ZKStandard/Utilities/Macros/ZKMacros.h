@@ -17,9 +17,11 @@
 #endif /* __OPTIMIZE__ */
 
 // ==================== Function Define ====================
-#define ZK_WEAKSELF(weakSelf)   __weak __typeof(&*self)(weakSelf) = self
-#define ZK_RGB(RGB)             [UIColor colorWithRed:((float)(((RGB) & 0xFF0000) >> 16)) / 255.0 green:((float)(((RGB) & 0xFF00) >> 8)) / 255.0 blue:((float)((RGB) & 0xFF)) / 255.0 alpha:1.0]
-#define ZK_RGBA(RGB, A)         [UIColor colorWithRed:((float)(((RGB) & 0xFF0000) >> 16)) / 255.0 green:((float)(((RGB) & 0xFF00) >> 8)) / 255.0 blue:((float)((RGB) & 0xFF)) / 255.0 alpha:A]
+#define ZK_WEAKSELF(weakSelf)       __weak __typeof(&*self)(weakSelf) = self
+#define ZK_STRONGSELF(strongSelf)   __strong __typeof(&*self) strongSelf = weakSelf;
+
+#define ZK_RGB(RGB)     [UIColor colorWithRed:((float)(((RGB) & 0xFF0000) >> 16)) / 255.0 green:((float)(((RGB) & 0xFF00) >> 8)) / 255.0 blue:((float)((RGB) & 0xFF)) / 255.0 alpha:1.0]
+#define ZK_RGBA(RGB, A) [UIColor colorWithRed:((float)(((RGB) & 0xFF0000) >> 16)) / 255.0 green:((float)(((RGB) & 0xFF00) >> 8)) / 255.0 blue:((float)((RGB) & 0xFF)) / 255.0 alpha:A]
 
 // ==================== Device Info ====================
 #define ZK_SCREEN_WIDTH     UIScreen.mainScreen.bounds.size.width

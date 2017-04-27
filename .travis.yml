@@ -1,0 +1,2 @@
+script:
+- xcodebuild -project Demo/Demo.xcodeproj -scheme Demo -sdk iphonesimulator

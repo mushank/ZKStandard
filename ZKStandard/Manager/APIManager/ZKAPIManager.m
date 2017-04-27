@@ -57,18 +57,16 @@
 
 #pragma mark - Network Monitor
 - (void)startNetworkMonitoring {
-    ZK_WEAKSELF(weakSelf);
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        weakSelf.reachabilityStatus = (ZKAPIManagerReachabilityStatus)status;
+        self.reachabilityStatus = (ZKAPIManagerReachabilityStatus)status;
     }];
 }
 
 - (void)checkNetworkStatus:(NetworkStatusBlock)block {
-    ZK_WEAKSELF(weakSelf);
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        weakSelf.reachabilityStatus = (ZKAPIManagerReachabilityStatus)status;
+        self.reachabilityStatus = (ZKAPIManagerReachabilityStatus)status;
         block((ZKAPIManagerReachabilityStatus)status);
     }];
 }

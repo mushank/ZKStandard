@@ -1,4 +1,8 @@
 # ZKStandard
+
+
+[![Travis-CI](https://travis-ci.org/mushank/ZKStandard.svg?branch=master)](https://travis-ci.org/mushank/ZKStandard) [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](http://www.apple.com/ios) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mushank/ZKStandard/blob/master/LICENSE)
+
 A basic framework for iOS App written in Objective-C
 
 ## Install
